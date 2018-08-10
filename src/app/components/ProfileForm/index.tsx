@@ -4,20 +4,25 @@ import { InjectedFormProps, reduxForm } from 'redux-form';
 import ContactsForm from './ContactsForm';
 import EducationForm from './EducationForm';
 import NamesForm from './NamesForm';
+import OtherForm from './OtherForm';
 
 const ProfileForm = (props: InjectedFormProps) => {
     const { handleSubmit, pristine, submitting } = props;
     return (
         <form onSubmit={handleSubmit}>
+            <h5>PERSONAL INFORMATION</h5>
             <NamesForm />
 
-            <hr className="mb-5 mt-5" />
-
+            <h5>CONTACTS</h5>
             <ContactsForm />
 
-            <hr className="mb-5 mt-5" />
-
+            <h5>EDUCATION</h5>
             <EducationForm />
+
+            <h5>EMPLOYMENT HISTORY</h5>
+
+            <h5>Other</h5>
+            <OtherForm />
 
             <div className="row text-center">
                 <div className="form-group col-md-12">
