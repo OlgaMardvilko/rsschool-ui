@@ -195,6 +195,20 @@ export const UNIVERSITIES = [
     },
 ];
 
+type EnglishLevel = {
+    name: string;
+    id: string;
+};
+
+export const ENGLISH_LEVEL: EnglishLevel[] = [
+    { id: 'a1', name: 'A1 (Beginner)' },
+    { id: 'a2', name: 'A2 (Elementary English)' },
+    { id: 'b1', name: 'B1 (Intermediate English)' },
+    { id: 'b2', name: 'B2 (Upper-Intermediate English)' },
+    { id: 'c1', name: 'C1 (Advanced English)' },
+    { id: 'c2', name: 'C2 (Profficiency English' },
+];
+
 const range = (start: number, count: number): number[] => {
     return Array.apply(0, Array(count)).map((_: number, index: number) => {
         return index + start;

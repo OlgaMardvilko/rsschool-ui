@@ -5,6 +5,7 @@ import ContactsForm from './ContactsForm';
 import EducationForm from './EducationForm';
 import NamesForm from './NamesForm';
 import OtherForm from './OtherForm';
+import EmploymentForm from './EmploymentForm';
 
 const ProfileForm = (props: InjectedFormProps) => {
     const { handleSubmit, pristine, submitting } = props;
@@ -20,8 +21,9 @@ const ProfileForm = (props: InjectedFormProps) => {
             <EducationForm />
 
             <h5>EMPLOYMENT HISTORY</h5>
+            <EmploymentForm />
 
-            <h5>Other</h5>
+            <h5>OTHER</h5>
             <OtherForm />
 
             <div className="row text-center">
