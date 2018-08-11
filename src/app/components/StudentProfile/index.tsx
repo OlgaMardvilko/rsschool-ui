@@ -19,11 +19,13 @@ const StudentProfile = (props: Props) => {
                     }}
                 />
                 <Education
-                    university={{ university: props.student.primaryEducation.university }}
-                    faculty={{ faculty: props.student.primaryEducation.faculty }}
-                    graduationYear={{ graduationYear: props.student.primaryEducation.graduationYear }}
-                    isInternshipNeeded={{ isInternshipNeeded: props.student.isInternshipNeeded }}
-                    isWorkNeeded={{ isWorkNeeded: props.student.isWorkNeeded }}
+                    primaryEducation={{
+                        university: props.student.primaryEducation.university,
+                        graduationYear: props.student.primaryEducation.graduationYear,
+                        faculty: props.student.primaryEducation.faculty,
+                    }}
+                    isInternshipNeeded={props.student.isInternshipNeeded}
+                    isWorkNeeded={props.student.isWorkNeeded}
                 />
             </div>
         </div>
