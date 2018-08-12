@@ -1,10 +1,13 @@
 import * as React from 'react';
-import { IProfile } from '../../core/models';
+import { IProfile, IFeedRecord } from '../../core/models';
 import ProfileName from './ProfileName';
 import Education from './Education';
+import MainInformation from './MainInformation';
 
+// TODO: add props for rating block MainInformation, change this block with props
 type Props = {
     student: IProfile;
+    user: IFeedRecord;
 };
 
 const StudentProfile = (props: Props) => {
@@ -17,6 +20,11 @@ const StudentProfile = (props: Props) => {
                         firstName: props.student.firstNameNative,
                         lastName: props.student.lastNameNative,
                     }}
+                />
+                <MainInformation
+                    englishLevel={props.student.englishLevel}
+                    city={props.student.city}
+                    githubName={props.user.userId}
                 />
                 <Education
                     primaryEducation={{
