@@ -6,8 +6,8 @@ import MainInformation from './MainInformation';
 
 // TODO: add props for rating block MainInformation, change this block with props
 type Props = {
-    student: IProfile;
-    user: IFeedRecord;
+    studentProfile: IProfile;
+    userId: IFeedRecord;
 };
 
 const StudentProfile = (props: Props) => {
@@ -15,25 +15,25 @@ const StudentProfile = (props: Props) => {
         <div className="jumbotron mt-2">
             <div className="col-md-9">
                 <ProfileName
-                    name={{ firstName: props.student.firstName, lastName: props.student.lastName }}
+                    name={{ firstName: props.studentProfile.firstName, lastName: props.studentProfile.lastName }}
                     nameNative={{
-                        firstName: props.student.firstNameNative,
-                        lastName: props.student.lastNameNative,
+                        firstName: props.studentProfile.firstNameNative,
+                        lastName: props.studentProfile.lastNameNative,
                     }}
                 />
                 <MainInformation
-                    englishLevel={props.student.englishLevel}
-                    city={props.student.city}
-                    githubName={props.user.userId}
+                    englishLevel={props.studentProfile.englishLevel}
+                    city={props.studentProfile.city}
+                    githubName={props.userId.userId}
                 />
                 <Education
                     primaryEducation={{
-                        university: props.student.primaryEducation.university,
-                        graduationYear: props.student.primaryEducation.graduationYear,
-                        faculty: props.student.primaryEducation.faculty,
+                        university: props.studentProfile.primaryEducation.university,
+                        graduationYear: props.studentProfile.primaryEducation.graduationYear,
+                        faculty: props.studentProfile.primaryEducation.faculty,
                     }}
-                    isInternshipNeeded={props.student.isInternshipNeeded}
-                    isWorkNeeded={props.student.isWorkNeeded}
+                    isInternshipNeeded={props.studentProfile.isInternshipNeeded}
+                    isWorkNeeded={props.studentProfile.isWorkNeeded}
                 />
             </div>
         </div>
