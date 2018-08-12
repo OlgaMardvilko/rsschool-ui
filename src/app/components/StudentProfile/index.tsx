@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { IProfile, IFeedRecord } from '../../core/models';
 import ProfileName from './ProfileName';
-import Education from './Education';
 import MainInformation from './MainInformation';
+import Contacts from './Contacts';
+import Education from './Education';
 
 // TODO: add props for rating block MainInformation, change this block with props
 type Props = {
@@ -25,6 +26,15 @@ const StudentProfile = (props: Props) => {
                     englishLevel={props.studentProfile.englishLevel}
                     city={props.studentProfile.city}
                     githubName={props.userId.userId}
+                />
+                <Contacts
+                    contacts={{
+                        phone: props.studentProfile.contacts.phone,
+                        emails: props.studentProfile.contacts.emails,
+                        skype: props.studentProfile.contacts.skype,
+                        telegram: props.studentProfile.contacts.telegram,
+                        other: props.studentProfile.contacts.other,
+                    }}
                 />
                 <Education
                     primaryEducation={{

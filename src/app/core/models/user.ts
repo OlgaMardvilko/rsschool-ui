@@ -1,6 +1,5 @@
 export interface IProfile {
     city: string;
-    emails: Array<{ value: string; type: string | undefined }>;
     employmentHistory: string;
     englishLevel: string;
     firstName: string;
@@ -10,7 +9,13 @@ export interface IProfile {
     lastName: string;
     lastNameNative: string;
     notes: string;
-    phone: string;
+    contacts: {
+        phone: string;
+        emails: Array<{ value: string; type: string | undefined }>;
+        skype: string;
+        telegram: string;
+        other: string;
+    };
     primaryEducation: {
         university: string;
         graduationYear: string;
