@@ -13,7 +13,7 @@ type Props = {
 const ProfileName = (props: Props) => (
     <React.Fragment>
         <h2 className="text-info">{`${props.name.firstName} ${props.name.lastName}`}</h2>
-        <p> {`${props.nameNative.firstName} ${props.nameNative.lastName}`}</p>
+        <p>RU: {`${props.nameNative.firstName} ${props.nameNative.lastName}`}</p>
     </React.Fragment>
 );
 
