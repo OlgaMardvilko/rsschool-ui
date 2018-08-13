@@ -7,7 +7,6 @@ import { InjectedFormProps, reduxForm, Field } from 'redux-form';
 type Props = {
     firstName: string;
     lastName: string;
-    toggle: () => void;
 };
 
 type State = {
@@ -19,17 +18,23 @@ class ModalExpel extends React.PureComponent<Props & InjectedFormProps<{}, Props
         isOpen: false,
     };
 
+    toggle = () => {
+        this.setState({
+            isOpen: !this.state.isOpen,
+        });
+    };
+
     render() {
-        const { firstName, lastName, toggle, pristine, submitting, handleSubmit } = this.props;
+        const { firstName, lastName, pristine, submitting, handleSubmit } = this.props;
         return (
             <React.Fragment>
-                <a href="#" onClick={toggle} className="text-danger">
+                <Button onClick={this.toggle} color="link" className="text-danger">
                     Expel a student
-                </a>
+                </Button>
 
-                <Modal isOpen={this.state.isOpen} toggle={toggle} centered={true}>
+                <Modal isOpen={this.state.isOpen} toggle={this.toggle} centered={true}>
                     <Form onSubmit={handleSubmit}>
-                        <ModalHeader toggle={toggle}>
+                        <ModalHeader toggle={this.toggle}>
                             <h5> STUDENT EXPULSION</h5>
                         </ModalHeader>
                         <ModalBody>
@@ -48,10 +53,10 @@ class ModalExpel extends React.PureComponent<Props & InjectedFormProps<{}, Props
                         </ModalBody>
                         <ModalFooter>
                             <FormGroup>
-                                <Button color="primary" type="submit" disabled={pristine || submitting}>
+                                <Button color="secondary" type="submit" disabled={pristine || submitting}>
                                     Yes
                                 </Button>{' '}
-                                <Button color="secondary" onClick={toggle}>
+                                <Button color="primary" onClick={this.toggle}>
                                     No
                                 </Button>
                             </FormGroup>
@@ -62,6 +67,7 @@ class ModalExpel extends React.PureComponent<Props & InjectedFormProps<{}, Props
         );
     }
 }
+
 export default reduxForm<{}, Props>({
     form: 'expelForm',
 })(ModalExpel);

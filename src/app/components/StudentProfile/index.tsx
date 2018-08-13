@@ -12,7 +12,6 @@ type Props = {
     studentProfile: IProfile;
     userId: IFeedRecord;
     handleExpel: () => void;
-    toggle: () => void;
 };
 
 const StudentProfile = (props: Props) => {
@@ -24,7 +23,6 @@ const StudentProfile = (props: Props) => {
                         firstName={props.studentProfile.firstName}
                         lastName={props.studentProfile.lastName}
                         onSubmit={props.handleExpel}
-                        toggle={props.toggle}
                     />
                 </Col>
                 <Col md="9">
