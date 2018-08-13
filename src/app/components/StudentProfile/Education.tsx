@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Row, Col } from 'reactstrap';
 
 type PrimaryEducation = {
     university: string;
@@ -14,27 +15,27 @@ type Props = {
 
 const Education = (props: Props) => (
     <React.Fragment>
-        <h4 className="badge badge-info">Education</h4>
-        <div className="row">
-            <div className="col-md-4">University:</div>
-            <div className="col-md-8">{`${props.primaryEducation.university}`}</div>
-        </div>
-        <div className="row">
-            <div className="col-md-4">Faculty:</div>
-            <div className="col-md-8">{`${props.primaryEducation.faculty}`}</div>
-        </div>
-        <div className="row">
-            <div className="col-md-4">Graduation year:</div>
-            <div className="col-md-8">{`${props.primaryEducation.graduationYear}`}</div>
-        </div>
-        <div className="row">
-            <div className="col-md-4">Вам нужна учебная практика в EPAM?</div>
-            <div className="col-md-8">{`${props.isInternshipNeeded}`}</div>
-        </div>
-        <div className="row">
-            <div className="col-md-4">Вам нужно распределение в EPAM после обучения в ВУЗе?</div>
-            <div className="col-md-8">{`${props.isWorkNeeded}`}</div>
-        </div>
+        <h2 className="badge badge-info">Education</h2>
+        <Row>
+            <Col md="4">University:</Col>
+            <Col md="8">{`${props.primaryEducation.university}`}</Col>
+        </Row>
+        <Row>
+            <Col md="4">Faculty:</Col>
+            <Col md="8">{`${props.primaryEducation.faculty}`}</Col>
+        </Row>
+        <Row>
+            <Col md="4">Graduation year:</Col>
+            <Col md="8">{`${props.primaryEducation.graduationYear}`}</Col>
+        </Row>
+        <Row>
+            <Col md="4">Вам нужна учебная практика в EPAM?</Col>
+            <Col md="8">{props.isInternshipNeeded ? 'Да' : 'Нет'}</Col>
+        </Row>
+        <Row>
+            <Col md="4">Вам нужно распределение в EPAM после обучения в ВУЗе?</Col>
+            <Col md="8">{props.isWorkNeeded ? 'Да' : 'Нет'}</Col>
+        </Row>
     </React.Fragment>
 );
 
