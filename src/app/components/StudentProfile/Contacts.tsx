@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Row, Col } from 'reactstrap';
 
 // TODO: what type of props do emails have?
 type Contacts = {
@@ -16,26 +17,26 @@ type Props = {
 const Contacts = (props: Props) => (
     <React.Fragment>
         <h4 className="badge badge-info">Contact information</h4>
-        <div className="row">
-            <div className="col-md-4">Phone:</div>
-            <div className="col-md-8">{`${props.contacts.phone}`}</div>
-        </div>
-        <div className="row">
-            <div className="col-md-4">Email:</div>
-            <div className="col-md-8">{`${props.contacts.emails}`}</div>
-        </div>
-        <div className="row">
-            <div className="col-md-4">Skype:</div>
-            <div className="col-md-8">{`${props.contacts.skype}`}</div>
-        </div>
-        <div className="row">
-            <div className="col-md-4">Telegram:</div>
-            <div className="col-md-8">{`${props.contacts.telegram}`}</div>
-        </div>
-        <div className="row">
-            <div className="col-md-4">Other messenger</div>
-            <div className="col-md-8">{`${props.contacts.other}`}</div>
-        </div>
+        <Row>
+            <Col md="4">Phone:</Col>
+            <Col md="8">{`${props.contacts.phone}`}</Col>
+        </Row>
+        <Row>
+            <Col md="4">Email:</Col>
+            <Col md="8">{`${props.contacts.emails}`}</Col>
+        </Row>
+        <Row>
+            <Col md="4">Skype:</Col>
+            <Col md="8">{`${props.contacts.skype}`}</Col>
+        </Row>
+        <Row>
+            <Col md="4">Telegram:</Col>
+            <Col md="8">{`${props.contacts.telegram}`}</Col>
+        </Row>
+        <Row>
+            <Col md="4">Other messenger</Col>
+            <Col md="8">{`${props.contacts.other}`}</Col>
+        </Row>
         <hr />
     </React.Fragment>
 );
