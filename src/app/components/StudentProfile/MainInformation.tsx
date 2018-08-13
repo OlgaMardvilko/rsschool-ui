@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Row, Col } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
@@ -12,28 +13,22 @@ type Props = {
 const MainInformation = (props: Props) => (
     <React.Fragment>
         <hr />
-        <div className="row text-center mt-5">
-            <div className="col-sm">
+        <Row>
+            <Col sm="3">
                 <p>Rating</p>
                 <h3>
                     22<small>/343</small>
                 </h3>
-            </div>
-        </div>
-        <div className="row text-center mt-5">
-            <div className="col-sm">
+            </Col>
+            <Col sm="3">
                 <p>English Level</p>
                 <h3>{`${props.englishLevel}`}</h3>
-            </div>
-        </div>
-        <div className="row text-center mt-5">
-            <div className="col-sm">
+            </Col>
+            <Col sm="3">
                 <p>City</p>
                 <h3>{`${props.city}`}</h3>
-            </div>
-        </div>
-        <div className="row text-center mt-5">
-            <div className="col-sm">
+            </Col>
+            <Col sm="3">
                 <p>
                     <a href={`https://github.com/${props.githubName}`}>{`${props.githubName}`}</a>
                 </p>
@@ -42,8 +37,8 @@ const MainInformation = (props: Props) => (
                         <FontAwesomeIcon icon={faGithub} />
                     </a>
                 </h3>
-            </div>
-        </div>
+            </Col>
+        </Row>
         <hr />
     </React.Fragment>
 );
