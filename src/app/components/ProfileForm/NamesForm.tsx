@@ -31,7 +31,6 @@ class NamesForm extends React.PureComponent<any, any> {
                 <FormGroup className="col-md-12">
                     <Label>City</Label>
                     <Field name="city" type="select" component={ReduxFormInput}>
-                        <option value="">(Empty)</option>
                         {CITIES.map(city => <option key={city.id}>{city.name}</option>)}
                     </Field>
                 </FormGroup>
@@ -46,7 +45,7 @@ class NamesForm extends React.PureComponent<any, any> {
                 <label className="col-md-12 field-required">Gender</label>
                 <FormGroup className="col">
                     <FormGroup className="form-check-inline">
-                        <Field name="sex" component={ReduxFormInput} type="radio" value="male" />
+                        <Field name="sex" component={ReduxFormInput} type="radio" value="male" checked="true" />
                         <label className="form-check-label">Male</label>
                     </FormGroup>
                     <FormGroup className="form-check-inline">
@@ -58,7 +57,7 @@ class NamesForm extends React.PureComponent<any, any> {
             <div key="6" className="row">
                 <label className="col-md-12 field-required">T-Shirt Size</label>
                 <FormGroup className="col-md-12">
-                    {SHIRT_SIZE.map(shirtSize => (
+                    {SHIRT_SIZE.map((shirtSize, index) => (
                         <FormGroup className="form-check-inline">
                             <input
                                 type="radio"
@@ -66,6 +65,7 @@ class NamesForm extends React.PureComponent<any, any> {
                                 name="sizeTshirt"
                                 key={shirtSize.id}
                                 className="form-check-input"
+                                defaultChecked={index === 0}
                             />
                             <label className="form-check-label">{shirtSize.name}</label>
                         </FormGroup>
