@@ -9,6 +9,7 @@ import Education from './Education';
 import Other from './Other';
 import Personal from './Personal';
 import Avatar from './Avatar';
+import EmploymentHistory from './EmploymentHistory';
 
 // TODO: add props for rating block MainInformation, change this block with props
 type Props = {
@@ -66,6 +67,15 @@ const StudentProfile = (props: Props) => {
                         }}
                         isInternshipNeeded={props.studentProfile.isInternshipNeeded}
                         isWorkNeeded={props.studentProfile.isWorkNeeded}
+                    />
+                    <EmploymentHistory
+                        employmentHistory={props.studentProfile.employmentHistory}
+                        epamEmail={props.studentProfile.epamDetails.epamEmail}
+                        epamUpsaId={props.studentProfile.epamDetails.epamUpsaId}
+                        isEPAMEmployee={props.studentProfile.epamDetails.isEPAMEmployee}
+                        yearsInFrontEnd={props.studentProfile.experience.yearsInFrontEnd}
+                        isStudiedAtRSSchool={props.studentProfile.experience.isStudiedAtRSSchool}
+                        hadMentoringExperience={props.studentProfile.experience.hadMentoringExperience}
                     />
                     <Other notes={props.studentProfile.notes} />
                 </Col>
