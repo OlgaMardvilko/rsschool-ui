@@ -17,7 +17,7 @@ class ExperienceForm extends React.PureComponent<any, any> {
             <div key="2" className="row">
                 <label className="col-md-12 field-required">Your Front-end Experience</label>
                 <FormGroup className="col-md-12">
-                    {EXPERIENCE.map(experience => (
+                    {EXPERIENCE.map((experience, index) => (
                         <FormGroup className="form-check">
                             <input
                                 type="radio"
@@ -25,6 +25,7 @@ class ExperienceForm extends React.PureComponent<any, any> {
                                 name="experience"
                                 key={experience.id}
                                 className="form-check-input"
+                                defaultChecked={index === 0}
                             />
                             <label className="form-check-label">{experience.name}</label>
                         </FormGroup>
@@ -35,7 +36,7 @@ class ExperienceForm extends React.PureComponent<any, any> {
                 <label className="col-md-12 field-required">I studied at the RSSchool</label>
                 <FormGroup className="col">
                     <FormGroup className="form-check">
-                        <Field name="ex-student" component={ReduxFormInput} type="radio" value="yes" />
+                        <Field name="ex-student" component={ReduxFormInput} type="radio" value="yes" checked="true" />
                         <label className="form-check-label">Yes</label>
                     </FormGroup>
                     <FormGroup className="form-check">
@@ -48,7 +49,7 @@ class ExperienceForm extends React.PureComponent<any, any> {
                 <label className="col-md-12 field-required">I was a mentor at the RSSchool</label>
                 <FormGroup className="col">
                     <FormGroup className="form-check">
-                        <Field name="ex-mentor" component={ReduxFormInput} type="radio" value="yes" />
+                        <Field name="ex-mentor" component={ReduxFormInput} type="radio" value="yes" checked="true" />
                         <label className="form-check-label">Yes</label>
                     </FormGroup>
                     <FormGroup className="form-check">

@@ -562,7 +562,7 @@ export const ENGLISH_LEVEL: EnglishLevel[] = [
     { id: 'b1', name: 'B1 (Intermediate English)' },
     { id: 'b2', name: 'B2 (Upper-Intermediate English)' },
     { id: 'c1', name: 'C1 (Advanced English)' },
-    { id: 'c2', name: 'C2 (Profficiency English' },
+    { id: 'c2', name: 'C2 (Profficiency English)' },
 ];
 
 const range = (start: number, count: number): number[] => {
