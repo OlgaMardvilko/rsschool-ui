@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { IProfile, IFeedRecord } from '../../core/models';
 import { Jumbotron, Row, Col } from 'reactstrap';
+import ModalExpel from './ModalExpel';
 import ProfileName from './ProfileName';
 import MainInformation from './MainInformation';
 import Contacts from './Contacts';
 import Education from './Education';
-import ModalExpel from './ModalExpel';
+import Other from './Other';
 
 // TODO: add props for rating block MainInformation, change this block with props
 type Props = {
@@ -59,6 +60,7 @@ const StudentProfile = (props: Props) => {
                         isInternshipNeeded={props.studentProfile.isInternshipNeeded}
                         isWorkNeeded={props.studentProfile.isWorkNeeded}
                     />
+                    <Other notes={props.studentProfile.notes} />
                 </Col>
             </Row>
         </Jumbotron>
