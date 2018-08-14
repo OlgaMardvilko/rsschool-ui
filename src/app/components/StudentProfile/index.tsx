@@ -8,6 +8,7 @@ import Contacts from './Contacts';
 import Education from './Education';
 import Other from './Other';
 import Personal from './Personal';
+import Avatar from './Avatar';
 
 // TODO: add props for rating block MainInformation, change this block with props
 type Props = {
@@ -21,6 +22,7 @@ const StudentProfile = (props: Props) => {
         <Jumbotron className="mt-2">
             <Row>
                 <Col md="3">
+                    <Avatar githubId={props.userId.userId} />
                     <ModalExpel
                         firstName={props.studentProfile.firstName}
                         lastName={props.studentProfile.lastName}
