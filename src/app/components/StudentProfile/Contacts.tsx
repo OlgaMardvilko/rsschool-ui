@@ -4,7 +4,7 @@ import { Row, Col } from 'reactstrap';
 // TODO: what type of props do emails have?
 type Contacts = {
     phone: string;
-    emails: Array<{ value: string; type: string | undefined }>;
+    emails: string;
     skype: string;
     telegram: string;
     other: string;

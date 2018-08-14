@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { IProfile, IFeedRecord } from '../../core/models';
+import { IProfile } from '../../core/models';
 import { Jumbotron, Row, Col } from 'reactstrap';
 import ModalExpel from './ModalExpel';
 import ProfileName from './ProfileName';
@@ -13,7 +13,6 @@ import Avatar from './Avatar';
 // TODO: add props for rating block MainInformation, change this block with props
 type Props = {
     studentProfile: IProfile;
-    userId: IFeedRecord;
     handleExpel: () => void;
 };
 
@@ -22,7 +21,7 @@ const StudentProfile = (props: Props) => {
         <Jumbotron className="mt-2">
             <Row>
                 <Col md="3">
-                    <Avatar githubId={props.userId.userId} />
+                    <Avatar githubId={props.studentProfile.githubId} />
                     <ModalExpel
                         firstName={props.studentProfile.firstName}
                         lastName={props.studentProfile.lastName}
@@ -43,12 +42,12 @@ const StudentProfile = (props: Props) => {
                     <MainInformation
                         englishLevel={props.studentProfile.englishLevel}
                         city={props.studentProfile.city}
-                        githubName={props.userId.userId}
+                        githubName={props.studentProfile.githubId}
                     />
                     <Personal
-                        birth={props.studentProfile.birth}
+                        dateOfBirth={props.studentProfile.dateOfbirth}
                         gender={props.studentProfile.gender}
-                        tShirt={props.studentProfile.tShirt}
+                        tShirtSize={props.studentProfile.tShirtSize}
                     />
                     <Contacts
                         contacts={{
