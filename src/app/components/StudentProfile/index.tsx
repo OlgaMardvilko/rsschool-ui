@@ -17,7 +17,7 @@ type Props = {
 
 const StudentProfile = (props: Props) => {
     return (
-        <Jumbotron mt="2">
+        <Jumbotron className="mt-2">
             <Row>
                 <Col md="3">
                     <ModalExpel
