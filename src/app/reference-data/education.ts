@@ -124,6 +124,16 @@ export const UNIVERSITIES = [
         ],
     },
     {
+        id: 'mrc',
+        name: 'Minsk Radioengineering College',
+        faculties: [
+            {
+                id: 'mrc-faculty-1',
+                name: 'Department of Computer Technologies',
+            },
+        ],
+    },
+    {
         id: 'bntu',
         name: 'BNTU',
         faculties: [

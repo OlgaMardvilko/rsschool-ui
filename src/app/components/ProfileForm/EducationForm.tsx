@@ -79,19 +79,17 @@ class EducationForm extends React.PureComponent<any, any> {
                 </FormGroup>
             </div>,
             <div key="4" className="row">
-                <FormGroup className="col-md-12">
-                    <Label>
-                        <Field component={ReduxFormInput} name="training" type="checkbox" />
-                        Вам нужна учебная практика в EPAM?
-                    </Label>
-                </FormGroup>
-            </div>,
-            <div key="5" className="row">
-                <FormGroup className="col-md-12">
-                    <Label>
-                        <Field component={ReduxFormInput} name="careerAssignment" type="checkbox" />
-                        Вам нужно распределение в EPAM после обучения в ВУЗе?
-                    </Label>
+                <FormGroup className="col">
+                    <FormGroup className="form-check">
+                        <Field name="training" component={ReduxFormInput} type="checkbox" />
+                        <label className="form-check-label">Вам нужна учебная практика в EPAM?</label>
+                    </FormGroup>
+                    <FormGroup className="form-check">
+                        <Field name="careerAssignment" component={ReduxFormInput} type="checkbox" />
+                        <label className="form-check-label">
+                            Вам нужно распределение в EPAM после обучения в ВУЗе?
+                        </label>
+                    </FormGroup>
                 </FormGroup>
             </div>,
         ];

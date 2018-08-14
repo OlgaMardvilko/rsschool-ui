@@ -13,11 +13,9 @@ class OtherForm extends React.PureComponent<any, any> {
                 </FormGroup>
             </div>,
             <div key="1" className="row">
-                <FormGroup className="col-md-12">
-                    <Label>
-                        <Field component={ReduxFormInput} name="subscribe" type="checkbox" />
-                        Subscribe to email notifications?
-                    </Label>
+                <FormGroup className="col-md-12 form-check-inline">
+                    <Field name="subscribe" component={ReduxFormInput} type="checkbox" />
+                    <label className="form-check-label">Subscribe to email notifications?</label>
                 </FormGroup>
             </div>,
         ];
