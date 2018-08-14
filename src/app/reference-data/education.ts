@@ -272,15 +272,15 @@ export const UNIVERSITIES = [
         ],
     },
     {
-        id: 'bstu',
+        id: 'bstu-ru',
         name: 'Bryansk State Technical University',
         faculties: [
             {
-                id: 'bstu-faculty-1',
+                id: 'bstu-ru-faculty-1',
                 name: 'Building department',
             },
             {
-                id: 'bstu-faculty-2',
+                id: 'bstu-ru-faculty-2',
                 name: 'Department of Energy and Electronics',
             },
         ],
@@ -290,11 +290,11 @@ export const UNIVERSITIES = [
         name: 'Brest State Technical University',
         faculties: [
             {
-                id: 'bstu-faculty-1',
+                id: 'brstu-faculty-1',
                 name: 'Faculty of Civil Engineering',
             },
             {
-                id: 'bstu-faculty-2',
+                id: 'brstu-faculty-2',
                 name: 'Faculty of Electronic-Informational Systems',
             },
         ],
@@ -382,19 +382,19 @@ export const UNIVERSITIES = [
         ],
     },
     {
-        id: 'bstu',
+        id: 'bstu-by',
         name: 'Belarusian State Technological University',
         faculties: [
             {
-                id: 'bstu-faculty-1',
+                id: 'bstu-by-faculty-1',
                 name: 'Chemical Technology and Engineering Faculty',
             },
             {
-                id: 'bstu-faculty-2',
+                id: 'bstu-by-faculty-2',
                 name: 'Faculty of Print Technology and Media Communications',
             },
             {
-                id: 'bstu-faculty-3',
+                id: 'bstu-by-faculty-3',
                 name: 'Faculty of Information Technology',
             },
         ],
