@@ -33,7 +33,7 @@ class ModalExpel extends React.PureComponent<Props & InjectedFormProps<{}, Props
                 </Button>
 
                 <Modal isOpen={this.state.isOpen} toggle={this.toggle} centered={true}>
-                    <Form onSubmit={handleSubmit}>
+                    <Form onSubmit={handleSubmit(this.toggle)}>
                         <ModalHeader toggle={this.toggle}>STUDENT EXPULSION</ModalHeader>
                         <ModalBody>
                             <p>Do you really want to expel {`${firstName} ${lastName}`}</p>
