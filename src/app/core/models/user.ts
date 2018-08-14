@@ -11,7 +11,7 @@ export interface IProfile {
     notes: string;
     contacts: {
         phone: string;
-        emails: Array<{ value: string; type: string | undefined }>;
+        emails: string;
         skype: string;
         telegram: string;
         other: string;
@@ -21,9 +21,20 @@ export interface IProfile {
         graduationYear: string;
         faculty: string;
     };
-    birth: string;
+    dateOfbirth: string;
     gender: string;
-    tShirt: string;
+    tShirtSize: string;
+    epamDetails: {
+        isEPAMEmployee: boolean;
+        epamEmail: string;
+        epamUpsaId: string;
+    };
+    experience: {
+        yearsInFrontEnd: string;
+        isStudiedAtRSSchool: boolean;
+        hadMentoringExperience: boolean;
+    };
+    githubId: string;
 }
 
 export interface IUserBase {
