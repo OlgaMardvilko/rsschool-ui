@@ -13,7 +13,7 @@ type Props = {
 const MainInformation = (props: Props) => (
     <React.Fragment>
         <hr />
-        <Row>
+        <Row className="text-center mt-5">
             <Col sm="3">
                 <p>Rating</p>
                 <h3>
