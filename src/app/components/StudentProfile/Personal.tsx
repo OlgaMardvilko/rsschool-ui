@@ -24,6 +24,7 @@ const Personal = (props: Props) => {
                 <Col md="4">T-shirt size</Col>
                 <Col md="8">{tShirtSize}</Col>
             </Row>
+            <hr />
         </React.Fragment>
     );
 };
