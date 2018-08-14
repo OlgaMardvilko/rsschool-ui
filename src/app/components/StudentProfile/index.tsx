@@ -7,6 +7,7 @@ import MainInformation from './MainInformation';
 import Contacts from './Contacts';
 import Education from './Education';
 import Other from './Other';
+import Personal from './Personal';
 
 // TODO: add props for rating block MainInformation, change this block with props
 type Props = {
@@ -41,6 +42,11 @@ const StudentProfile = (props: Props) => {
                         englishLevel={props.studentProfile.englishLevel}
                         city={props.studentProfile.city}
                         githubName={props.userId.userId}
+                    />
+                    <Personal
+                        birth={props.studentProfile.birth}
+                        gender={props.studentProfile.gender}
+                        tShirt={props.studentProfile.tShirt}
                     />
                     <Contacts
                         contacts={{

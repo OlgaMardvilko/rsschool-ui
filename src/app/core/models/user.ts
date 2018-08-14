@@ -21,6 +21,9 @@ export interface IProfile {
         graduationYear: string;
         faculty: string;
     };
+    birth: string;
+    gender: string;
+    tShirt: string;
 }
 
 export interface IUserBase {
