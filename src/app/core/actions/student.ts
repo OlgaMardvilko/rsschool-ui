@@ -1,20 +1,21 @@
 import { getStudentProfile } from '../api/student';
+import { STUDENT } from '../constants';
 
 export const fetchStudent = () => {
     return async (dispatch: any) => {
         dispatch({
-            type: 'FETCHING_STUDENT_PROFILE',
+            type: STUDENT.STUDENT_PROFILE_FETCH,
         });
 
         try {
             const data = await getStudentProfile;
             dispatch({
-                type: 'FETCH_STUDENT_PROFILE_OK',
+                type: STUDENT.STUDENT_PROFILE_FETCH_OK,
                 payload: data,
             });
         } catch (e) {
             dispatch({
-                type: 'FETCH_STUDENT_PROFILE_ERROR',
+                type: STUDENT.STUDENT_PROFILE_FETCH_FAIL,
             });
         }
     };
