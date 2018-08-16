@@ -1,3 +1,15 @@
+export enum Gender {
+    male = 'male',
+    female = 'female',
+}
+
+export enum YearsInFrontEnd {
+    lessOne = 'less than 1 year',
+    lesTwo = 'less than 2 years',
+    twoFive = '2-5 years',
+    moreFive = 'more than 5 years',
+}
+
 export interface IProfile {
     city: string;
     employmentHistory: string;
@@ -18,19 +30,19 @@ export interface IProfile {
     };
     primaryEducation: {
         university: string;
-        graduationYear: string;
+        graduationYear: number;
         faculty: string;
     };
-    dateOfbirth: string;
-    gender: string;
+    dateOfBirth: string;
+    gender: Gender;
     tShirtSize: string;
     epamDetails: {
         isEPAMEmployee: boolean;
-        epamEmail: string;
-        epamUpsaId: string;
+        epamEmail?: string;
+        epamUpsaId?: string;
     };
     experience: {
-        yearsInFrontEnd: string;
+        yearsInFrontEnd?: YearsInFrontEnd;
         isStudiedAtRSSchool: boolean;
         hadMentoringExperience: boolean;
     };

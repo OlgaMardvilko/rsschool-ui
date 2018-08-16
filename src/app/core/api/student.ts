@@ -1,4 +1,4 @@
-import { IProfile } from '../models';
+import { IProfile, Gender, YearsInFrontEnd } from '../models';
 
 const student: IProfile = {
     firstName: 'Ivan',
@@ -16,15 +16,15 @@ const student: IProfile = {
     },
     primaryEducation: {
         university: 'BSU',
-        graduationYear: '2121',
+        graduationYear: 2121,
         faculty: 'ssssss',
     },
     isInternshipNeeded: true,
     isWorkNeeded: true,
     employmentHistory: 'dadada',
     notes: 'dadad',
-    dateOfbirth: '1990',
-    gender: 'Male',
+    dateOfBirth: '1990',
+    gender: Gender.male,
     tShirtSize: 'XL',
     epamDetails: {
         isEPAMEmployee: true,
@@ -32,7 +32,7 @@ const student: IProfile = {
         epamUpsaId: '2332193829489324',
     },
     experience: {
-        yearsInFrontEnd: 'neti',
+        yearsInFrontEnd: YearsInFrontEnd.lessOne,
         isStudiedAtRSSchool: false,
         hadMentoringExperience: false,
     },

@@ -1,12 +1,13 @@
 import * as React from 'react';
 import { Row, Col } from 'reactstrap';
+import { YearsInFrontEnd } from '../../core/models';
 
 type Props = {
     employmentHistory: string;
     isEPAMEmployee: boolean;
-    epamEmail: string;
-    epamUpsaId: string;
-    yearsInFrontEnd: string;
+    epamEmail?: string;
+    epamUpsaId?: string;
+    yearsInFrontEnd?: YearsInFrontEnd;
     isStudiedAtRSSchool: boolean;
     hadMentoringExperience: boolean;
 };

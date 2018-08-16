@@ -53,7 +53,7 @@ const StudentProfile = (props: Props) => {
                     <hr />
 
                     <Personal
-                        dateOfBirth={props.studentProfile.dateOfbirth}
+                        dateOfBirth={props.studentProfile.dateOfBirth}
                         gender={props.studentProfile.gender}
                         tShirtSize={props.studentProfile.tShirtSize}
                     />

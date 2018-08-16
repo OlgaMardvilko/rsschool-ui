@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { Row, Col } from 'reactstrap';
+import { Gender } from '../../core/models';
 
 type Props = {
     dateOfBirth: string;
-    gender: string;
+    gender: Gender;
     tShirtSize: string;
 };
 

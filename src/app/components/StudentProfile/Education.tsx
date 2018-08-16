@@ -4,7 +4,7 @@ import { Row, Col } from 'reactstrap';
 type PrimaryEducation = {
     university: string;
     faculty: string;
-    graduationYear: string;
+    graduationYear: number;
 };
 
 type Props = {
