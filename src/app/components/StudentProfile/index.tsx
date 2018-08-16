@@ -10,6 +10,7 @@ import Other from './Other';
 import Personal from './Personal';
 import Avatar from './Avatar';
 import EmploymentHistory from './EmploymentHistory';
+import TaskProgress from './TaskProgress';
 
 // TODO: add props for rating block MainInformation, change this block with props
 type Props = {
@@ -78,6 +79,7 @@ const StudentProfile = (props: Props) => {
                         hadMentoringExperience={props.studentProfile.experience.hadMentoringExperience}
                     />
                     <Other notes={props.studentProfile.notes} />
+                    <TaskProgress />
                 </Col>
             </Row>
         </Jumbotron>
