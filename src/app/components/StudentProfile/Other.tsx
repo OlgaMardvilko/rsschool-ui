@@ -14,7 +14,6 @@ const Other = (props: Props) => (
                 <p>{`${props.notes}`}</p>
             </Col>
         </Row>
-        <hr />
     </React.Fragment>
 );
 

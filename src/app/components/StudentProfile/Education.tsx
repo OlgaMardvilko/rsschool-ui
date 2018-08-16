@@ -36,7 +36,6 @@ const Education = (props: Props) => (
             <Col md="4">Вам нужно распределение в EPAM после обучения в ВУЗе?</Col>
             <Col md="8">{props.isWorkNeeded ? 'Да' : 'Нет'}</Col>
         </Row>
-        <hr />
     </React.Fragment>
 );
 

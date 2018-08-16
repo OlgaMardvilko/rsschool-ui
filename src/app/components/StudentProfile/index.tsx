@@ -41,16 +41,25 @@ const StudentProfile = (props: Props) => {
                             lastName: props.studentProfile.lastNameNative,
                         }}
                     />
+
+                    <hr />
+
                     <MainInformation
                         englishLevel={props.studentProfile.englishLevel}
                         city={props.studentProfile.city}
                         githubName={props.studentProfile.githubId}
                     />
+
+                    <hr />
+
                     <Personal
                         dateOfBirth={props.studentProfile.dateOfbirth}
                         gender={props.studentProfile.gender}
                         tShirtSize={props.studentProfile.tShirtSize}
                     />
+
+                    <hr />
+
                     <Contacts
                         contacts={{
                             phone: props.studentProfile.contacts.phone,
@@ -60,6 +69,9 @@ const StudentProfile = (props: Props) => {
                             other: props.studentProfile.contacts.other,
                         }}
                     />
+
+                    <hr />
+
                     <Education
                         primaryEducation={{
                             university: props.studentProfile.primaryEducation.university,
@@ -69,6 +81,9 @@ const StudentProfile = (props: Props) => {
                         isInternshipNeeded={props.studentProfile.isInternshipNeeded}
                         isWorkNeeded={props.studentProfile.isWorkNeeded}
                     />
+
+                    <hr />
+
                     <EmploymentHistory
                         employmentHistory={props.studentProfile.employmentHistory}
                         epamEmail={props.studentProfile.epamDetails.epamEmail}
@@ -78,7 +93,13 @@ const StudentProfile = (props: Props) => {
                         isStudiedAtRSSchool={props.studentProfile.experience.isStudiedAtRSSchool}
                         hadMentoringExperience={props.studentProfile.experience.hadMentoringExperience}
                     />
+
+                    <hr />
+
                     <Other notes={props.studentProfile.notes} />
+
+                    <hr />
+
                     <TaskProgress />
                 </Col>
             </Row>

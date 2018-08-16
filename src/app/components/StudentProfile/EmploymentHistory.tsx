@@ -52,7 +52,6 @@ const EmploymentHistory = (props: Props) => {
                 <Col md="4">EPAM UPSA ID:</Col>
                 <Col md="8">{epamUpsaId}</Col>
             </Row>
-            <hr />
         </React.Fragment>
     );
 };

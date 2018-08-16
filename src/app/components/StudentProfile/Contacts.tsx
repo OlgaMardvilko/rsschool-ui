@@ -37,7 +37,6 @@ const Contacts = (props: Props) => (
             <Col md="4">Other messenger</Col>
             <Col md="8">{`${props.contacts.other}`}</Col>
         </Row>
-        <hr />
     </React.Fragment>
 );
 
