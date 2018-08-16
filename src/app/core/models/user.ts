@@ -1,9 +1,10 @@
 export enum Gender {
-    male = 'male',
-    female = 'female',
+    male = 'Male',
+    female = 'Female',
 }
 
 export enum YearsInFrontEnd {
+    no = 'no experience',
     lessOne = 'less than 1 year',
     lesTwo = 'less than 2 years',
     twoFive = '2-5 years',
