@@ -1,6 +1,17 @@
+export enum Gender {
+    'male',
+    'female',
+}
+
+export enum YearsInFrontEnd {
+    'less than 1 year',
+    'less than 2 years',
+    '2-5 years',
+    'more than 5 years',
+}
+
 export interface IProfile {
     city: string;
-    emails: Array<{ value: string; type: string | undefined }>;
     employmentHistory: string;
     englishLevel: string;
     firstName: string;
@@ -10,12 +21,32 @@ export interface IProfile {
     lastName: string;
     lastNameNative: string;
     notes: string;
-    phone: string;
+    contacts: {
+        phone: string;
+        emails: string;
+        skype: string;
+        telegram: string;
+        other: string;
+    };
     primaryEducation: {
         university: string;
-        graduationYear: string;
+        graduationYear: number;
         faculty: string;
     };
+    dateOfBirth: string;
+    gender: Gender;
+    tShirtSize: string;
+    epamDetails: {
+        isEPAMEmployee: boolean;
+        epamEmail?: string;
+        epamUpsaId?: string;
+    };
+    experience: {
+        yearsInFrontEnd?: YearsInFrontEnd;
+        isStudiedAtRSSchool: boolean;
+        hadMentoringExperience: boolean;
+    };
+    githubId: string;
 }
 
 export interface IUserBase {

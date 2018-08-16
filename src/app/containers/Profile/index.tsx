@@ -38,6 +38,7 @@ class Profile extends React.Component<ProfileProps> {
     }
 
     handleSubmit = (formData: any) => {
+        // console.log(formData);
         this.props.submit(formData);
     };
 

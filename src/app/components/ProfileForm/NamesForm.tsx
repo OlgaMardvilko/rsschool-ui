@@ -2,7 +2,7 @@ import ReduxFormInput from 'components/ReduxFormInput';
 import * as React from 'react';
 import { FormGroup, Label } from 'reactstrap';
 import { Field } from 'redux-form';
-import { CITIES, SHIRT_SIZE } from '../../reference-data';
+import { CITIES, SHIRT_SIZE, GENDER } from '../../reference-data';
 
 class NamesForm extends React.PureComponent<any, any> {
     render() {
@@ -43,22 +43,27 @@ class NamesForm extends React.PureComponent<any, any> {
             </div>,
             <div key="5" className="row">
                 <label className="col-md-12 field-required">Gender</label>
-                <FormGroup className="col">
-                    <FormGroup className="form-check-inline">
-                        <Field name="sex" component={ReduxFormInput} type="radio" value="male" checked="true" />
-                        <label className="form-check-label">Male</label>
-                    </FormGroup>
-                    <FormGroup className="form-check-inline">
-                        <Field name="sex" component={ReduxFormInput} type="radio" value="female" />
-                        <label className="form-check-label">Female</label>
-                    </FormGroup>
+                <FormGroup className="col-md-12">
+                    {GENDER.map((gender, index) => (
+                        <FormGroup className="form-check-inline" key={index}>
+                            <input
+                                type="radio"
+                                value={gender.name}
+                                name="gender"
+                                key={gender.id}
+                                className="form-check-input"
+                                defaultChecked={index === 0}
+                            />
+                            <label className="form-check-label">{gender.name}</label>
+                        </FormGroup>
+                    ))}
                 </FormGroup>
             </div>,
             <div key="6" className="row">
                 <label className="col-md-12 field-required">T-Shirt Size</label>
                 <FormGroup className="col-md-12">
                     {SHIRT_SIZE.map((shirtSize, index) => (
-                        <FormGroup className="form-check-inline">
+                        <FormGroup className="form-check-inline" key={index}>
                             <input
                                 type="radio"
                                 value={shirtSize.name}

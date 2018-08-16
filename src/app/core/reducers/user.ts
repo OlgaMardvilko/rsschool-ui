@@ -29,6 +29,7 @@ export function userReducer(state = initialState, action: Action<any>): UserStat
             };
         }
         case USER.PROFILE_UPDATE_OK: {
+            // console.log(action.payload);
             return {
                 ...state,
                 profile: action.payload,

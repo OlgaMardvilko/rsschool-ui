@@ -17,7 +17,6 @@ class ReduxFormInput extends React.PureComponent<React.InputHTMLAttributes<HTMLI
             children,
             min,
             max,
-            checked,
             meta: { touched, error, warning, invalid, valid },
         } = this.props;
 
@@ -35,7 +34,6 @@ class ReduxFormInput extends React.PureComponent<React.InputHTMLAttributes<HTMLI
                     className={className}
                     min={min}
                     max={max}
-                    checked={checked}
                 >
                     {children}
                 </Input>

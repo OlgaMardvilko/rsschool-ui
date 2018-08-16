@@ -18,7 +18,7 @@ class ExperienceForm extends React.PureComponent<any, any> {
                 <label className="col-md-12 field-required">Your Front-end Experience</label>
                 <FormGroup className="col-md-12">
                     {EXPERIENCE.map((experience, index) => (
-                        <FormGroup className="form-check">
+                        <FormGroup className="form-check" key={index}>
                             <input
                                 type="radio"
                                 value={experience.name}
@@ -36,7 +36,7 @@ class ExperienceForm extends React.PureComponent<any, any> {
                 <label className="col-md-12 field-required">I studied at the RSSchool</label>
                 <FormGroup className="col">
                     <FormGroup className="form-check">
-                        <Field name="ex-student" component={ReduxFormInput} type="radio" value="yes" checked="true" />
+                        <Field name="ex-student" component={ReduxFormInput} type="radio" value="yes" />
                         <label className="form-check-label">Yes</label>
                     </FormGroup>
                     <FormGroup className="form-check">
@@ -49,7 +49,7 @@ class ExperienceForm extends React.PureComponent<any, any> {
                 <label className="col-md-12 field-required">I was a mentor at the RSSchool</label>
                 <FormGroup className="col">
                     <FormGroup className="form-check">
-                        <Field name="ex-mentor" component={ReduxFormInput} type="radio" value="yes" checked="true" />
+                        <Field name="ex-mentor" component={ReduxFormInput} type="radio" value="yes" />
                         <label className="form-check-label">Yes</label>
                     </FormGroup>
                     <FormGroup className="form-check">
