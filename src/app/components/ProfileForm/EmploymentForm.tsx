@@ -22,7 +22,7 @@ class ExperienceForm extends React.PureComponent<any, any> {
                             <input
                                 type="radio"
                                 value={experience.name}
-                                name="experience"
+                                name="expireance.yearsInFrontEnd"
                                 key={experience.id}
                                 className="form-check-input"
                                 defaultChecked={index === 0}
