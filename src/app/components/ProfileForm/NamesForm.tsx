@@ -38,7 +38,7 @@ class NamesForm extends React.PureComponent<any, any> {
             <div key="4" className="row">
                 <FormGroup className="col-md-12">
                     <Label className="field-required">Birth Date</Label>
-                    <Field name="birthDate" placeholder="12-08-1997" component={ReduxFormInput} type="text" />
+                    <Field name="dateOfBirth" placeholder="12-08-1997" component={ReduxFormInput} type="text" />
                 </FormGroup>
             </div>,
             <div key="5" className="row">
@@ -52,7 +52,6 @@ class NamesForm extends React.PureComponent<any, any> {
                                 name="gender"
                                 key={gender.id}
                                 className="form-check-input"
-                                defaultChecked={index === 0}
                             />
                             <label className="form-check-label">{gender.name}</label>
                         </FormGroup>
@@ -63,14 +62,13 @@ class NamesForm extends React.PureComponent<any, any> {
                 <label className="col-md-12 field-required">T-Shirt Size</label>
                 <FormGroup className="col-md-12">
                     {SHIRT_SIZE.map((shirtSize, index) => (
-                        <FormGroup className="form-check-inline" key={index}>
+                        <FormGroup className="form-check-inline" key={index} name="tShirtSize">
                             <input
                                 type="radio"
                                 value={shirtSize.name}
-                                name="sizeTshirt"
+                                name="tShirtSize"
                                 key={shirtSize.id}
                                 className="form-check-input"
-                                defaultChecked={index === 0}
                             />
                             <label className="form-check-label">{shirtSize.name}</label>
                         </FormGroup>

@@ -13,7 +13,7 @@ class ContactsForm extends React.PureComponent<any, any> {
                     <InputGroup className="mb-3">
                         <InputGroupAddon addonType="prepend">8-</InputGroupAddon>
                         <Field
-                            name="phone"
+                            name="contacts.phone"
                             pattern="(\+?\d[- .]*){9,13}"
                             placeholder="111-111-11-11"
                             component={ReduxFormInput}
@@ -28,7 +28,7 @@ class ContactsForm extends React.PureComponent<any, any> {
                     <Field
                         component={ReduxFormInput}
                         format={emailFormatter}
-                        name="emails"
+                        name="contacts.emails"
                         parse={emailParser}
                         placeholder="Email"
                         type="email"
@@ -38,13 +38,13 @@ class ContactsForm extends React.PureComponent<any, any> {
             <div key="2" className="row">
                 <FormGroup className="col-md-12">
                     <Label>You nickname at Skype</Label>
-                    <Field component={ReduxFormInput} name="skypeNickname" placeholder="ivan.ivanov" type="text" />
+                    <Field component={ReduxFormInput} name="contacts.skype" placeholder="ivan.ivanov" type="text" />
                 </FormGroup>
             </div>,
             <div key="3" className="row">
                 <FormGroup className="col-md-12">
                     <Label>You nickname at Telegram</Label>
-                    <Field component={ReduxFormInput} name="telegramName" placeholder="@ivan.ivanov" type="text" />
+                    <Field component={ReduxFormInput} name="contacts.telegram" placeholder="@ivan.ivanov" type="text" />
                 </FormGroup>
             </div>,
             <div key="4" className="row">
@@ -52,7 +52,7 @@ class ContactsForm extends React.PureComponent<any, any> {
                     <Label>Other contact</Label>
                     <Field
                         component={ReduxFormInput}
-                        name="otherContact"
+                        name="contacts.other"
                         placeholder="Messenger name: @nickname"
                         type="text"
                     />

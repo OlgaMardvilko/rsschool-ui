@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button } from 'reactstrap';
+import { Button, Jumbotron } from 'reactstrap';
 import { InjectedFormProps, reduxForm } from 'redux-form';
 import ContactsForm from './ContactsForm';
 import EducationForm from './EducationForm';
@@ -12,19 +12,29 @@ const ProfileForm = (props: InjectedFormProps) => {
     return (
         <form onSubmit={handleSubmit}>
             <h5>PERSONAL INFORMATION</h5>
-            <NamesForm />
+            <Jumbotron>
+                <NamesForm />
+            </Jumbotron>
 
             <h5>CONTACTS</h5>
-            <ContactsForm />
+            <Jumbotron>
+                <ContactsForm />
+            </Jumbotron>
 
             <h5>EDUCATION</h5>
-            <EducationForm />
+            <Jumbotron>
+                <EducationForm />
+            </Jumbotron>
 
             <h5>EMPLOYMENT HISTORY</h5>
-            <EmploymentForm />
+            <Jumbotron>
+                <EmploymentForm />
+            </Jumbotron>
 
             <h5>OTHER</h5>
-            <OtherForm />
+            <Jumbotron>
+                <OtherForm />
+            </Jumbotron>
 
             <div className="row text-center">
                 <div className="form-group col-md-12">
