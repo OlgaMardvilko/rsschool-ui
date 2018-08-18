@@ -65,9 +65,8 @@ const TaskProgress = () => (
                 </Col>
                 <Col md="8">
                     <p>
-                        Score:
+                        Score:{' '}
                         <span className="badge badge-primary">
-                            {' '}
                             {task.score} out of {task.maxScore}
                         </span>
                     </p>
