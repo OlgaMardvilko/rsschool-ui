@@ -9,13 +9,16 @@ class OtherForm extends React.PureComponent<any, any> {
             <div key="0" className="row">
                 <FormGroup className="col-md-12">
                     <Label>Additional Information</Label>
-                    <Field name="other" component={ReduxFormInput} type="textarea" />
+                    <Field name="notes" component={ReduxFormInput} type="textarea" />
                 </FormGroup>
             </div>,
+
             <div key="1" className="row">
                 <FormGroup className="col-md-12 form-check-inline">
-                    <Field name="subscribe" component={ReduxFormInput} type="checkbox" />
-                    <label className="form-check-label">Subscribe to email notifications?</label>
+                    <label className="form-check-label">
+                        <Field name="subscribe" component={ReduxFormInput} type="checkbox" />
+                        Subscribe to email notifications?
+                    </label>
                 </FormGroup>
             </div>,
         ];
