@@ -43,8 +43,13 @@ export interface IProfile {
     };
     experience: {
         yearsInFrontEnd?: YearsInFrontEnd;
-        isStudiedAtRSSchool: boolean;
-        hadMentoringExperience: boolean;
+        isStudiedAtRSSchool: string;
+        hadMentoringExperience: string;
+    };
+    mentoring: {
+        amountStages: string;
+        amountStudents: string;
+        colleague: string;
     };
     githubId: string;
 }

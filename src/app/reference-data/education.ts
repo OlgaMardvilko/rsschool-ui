@@ -576,3 +576,8 @@ export const EDUCATION_YEARS = range(startYear, graduationOffset + 6).map((year:
     id: year.toString(),
     name: year.toString(),
 }));
+
+export const QUANTITY = range(1, 10).map((num: number) => ({
+    id: num.toString(),
+    name: num.toString(),
+}));
