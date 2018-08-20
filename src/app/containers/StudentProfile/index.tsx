@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { IProfile } from '../../core/models/index';
+import { IProfile, IUser, IUserBase } from '../../core/models/index';
 import Student from '../../components/StudentProfile/index';
 import { connect } from 'react-redux';
 import { RootState } from 'core/reducers/index';
 import { fetchStudent } from '../../core/actions/student';
+import { getStudentMentors, getStudentProfile } from '../../core/selectors';
 
 class Index extends React.Component<Props, any> {
     componentDidMount() {
@@ -11,8 +12,8 @@ class Index extends React.Component<Props, any> {
     }
 
     render() {
-        return this.props.studentProfile ? (
-            <Student handleExpel={() => {}} studentProfile={this.props.studentProfile} />
+        return this.props.profile ? (
+            <Student handleExpel={() => {}} studentProfile={this.props.profile} mentors={this.props.mentors} />
         ) : (
             <h2>loading...</h2>
         );
@@ -20,14 +21,16 @@ class Index extends React.Component<Props, any> {
 }
 
 type Props = {
-    studentProfile: IProfile | undefined;
+    profile: IProfile | undefined;
     fetchStudent: () => void;
+    mentors: Array<IUser | IUserBase> | undefined;
 };
 
 const mapStateToProps = (state: RootState, props: Props): Props => {
     return {
         ...props,
-        studentProfile: state.student.studentProfile,
+        profile: getStudentProfile(state),
+        mentors: getStudentMentors(state),
     };
 };
 

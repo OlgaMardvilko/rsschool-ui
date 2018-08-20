@@ -67,7 +67,7 @@ export interface IUserParticipation {
 }
 
 export interface IUser extends IUserSession {
-    profile: Partial<IProfile>;
+    profile: IProfile;
     participations: IUserParticipation[];
 }
 

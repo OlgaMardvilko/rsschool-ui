@@ -1,13 +1,13 @@
-import { IProfile } from '../models';
+import { ICourseStudent } from '../models';
 import { Action } from '../util';
 import { STUDENT } from '../constants';
 
 export interface StudentState {
-    studentProfile: IProfile | undefined;
+    student: ICourseStudent | undefined;
 }
 
 const initialState: StudentState = {
-    studentProfile: undefined,
+    student: undefined,
 };
 
 export function studentReducer(state = initialState, action: Action<any>): StudentState {
@@ -15,7 +15,7 @@ export function studentReducer(state = initialState, action: Action<any>): Stude
         case STUDENT.STUDENT_PROFILE_FETCH_OK: {
             return {
                 ...state,
-                studentProfile: action.payload,
+                student: action.payload,
             };
         }
         default:

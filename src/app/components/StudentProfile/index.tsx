@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { IProfile } from '../../core/models';
-import { Jumbotron, Row, Col } from 'reactstrap';
+import { IProfile, IUser, IUserBase } from '../../core/models';
+import { Col, Jumbotron, Row } from 'reactstrap';
 import ModalExpel from './ModalExpel';
 import ProfileName from './ProfileName';
 import MainInformation from './MainInformation';
@@ -11,11 +11,13 @@ import Personal from './Personal';
 import Avatar from './Avatar';
 import EmploymentHistory from './EmploymentHistory';
 import TaskProgress from './TaskProgress';
+import Mentors from './Mentors';
 
 // TODO: add props for rating block MainInformation, change this block with props
 type Props = {
     studentProfile: IProfile;
     handleExpel: () => void;
+    mentors: Array<IUserBase | IUser> | undefined;
 };
 
 const StudentProfile = (props: Props) => {
@@ -41,6 +43,7 @@ const StudentProfile = (props: Props) => {
                             lastName: props.studentProfile.lastNameNative,
                         }}
                     />
+                    <Mentors mentors={props.mentors} />
 
                     <hr />
 
