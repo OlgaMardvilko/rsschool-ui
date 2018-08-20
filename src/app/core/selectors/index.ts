@@ -1,3 +1,4 @@
+
 import { RootState } from '../reducers';
 
 export const getStudentProfile = (state: RootState) => {
@@ -13,3 +14,13 @@ export const getStudentMentors = (state: RootState) => {
     }
     return;
 };
+
+export function isAnyPartLoaded({ router, ...state }: any) {
+    for (const key in state) {
+        if (!!state[key].isLoading) {
+            return true;
+        }
+    }
+    return false;
+}
+
