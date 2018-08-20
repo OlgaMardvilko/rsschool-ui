@@ -7,7 +7,7 @@ import NamesForm from './NamesForm';
 import OtherForm from './OtherForm';
 import EmploymentForm from './EmploymentForm';
 
-const ProfileForm = (props: InjectedFormProps) => {
+const UserProfileForm = (props: InjectedFormProps) => {
     const { handleSubmit, pristine, submitting } = props;
     return (
         <div>
@@ -56,4 +56,4 @@ const ProfileForm = (props: InjectedFormProps) => {
 
 export default reduxForm({
     form: 'profileForm',
-})(ProfileForm);
+})(UserProfileForm);
