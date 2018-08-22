@@ -116,6 +116,11 @@ const student: ICourseStudent = {
                 isStudiedAtRSSchool: false,
                 hadMentoringExperience: false,
             },
+            mentoring: {
+                amountStages: '',
+                amountStudents: '',
+                colleague: '',
+            },
             githubId: 'KatieVo',
         },
         participations: [

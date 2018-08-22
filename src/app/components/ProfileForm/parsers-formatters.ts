@@ -9,3 +9,5 @@ export const emailFormatter = (emails: Array<{ primary: boolean; value: string }
 export const emailParser = (email: string) => {
     return [{ primary: true, value: email }];
 };
+
+export const required = (value: string) => (value ? undefined : 'Required');

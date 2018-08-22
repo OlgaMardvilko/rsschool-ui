@@ -83,11 +83,19 @@ class Header extends React.Component<Props, any> {
                                 </NavLink>
                             </li>
                         )}
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/profile">
-                                Profile
-                            </NavLink>
-                        </li>
+                        {this.props.isAdmin ? (
+                            <li className="nav-item">
+                                <NavLink className="nav-link" to="/profile/mentor">
+                                    Profile
+                                </NavLink>
+                            </li>
+                        ) : (
+                            <li className="nav-item">
+                                <NavLink className="nav-link" to="/profile/student">
+                                    Profile
+                                </NavLink>
+                            </li>
+                        )}
                         {this.props.hasCourse && (
                             <li className="nav-item">
                                 <NavLink className="nav-link" to="/me/mentor">

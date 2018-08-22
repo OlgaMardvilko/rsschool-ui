@@ -1,20 +1,22 @@
 import * as React from 'react';
 import { Button, Jumbotron } from 'reactstrap';
 import { InjectedFormProps, reduxForm } from 'redux-form';
-import ContactsForm from './ContactsForm';
-import EducationForm from './EducationForm';
 import NamesForm from './NamesForm';
-import OtherForm from './OtherForm';
+import ContactsForm from './ContactsForm';
 import EmploymentForm from './EmploymentForm';
+import MentoringForm from './MentoringForm';
+import OtherForm from './OtherForm';
 
-const UserProfileForm = (props: InjectedFormProps) => {
+const MentorProfileForm = (props: InjectedFormProps) => {
     const { handleSubmit, pristine, submitting } = props;
     return (
         <div>
-            <h2>Student Profile</h2>
+            <h2>Mentor Profile</h2>
             <p className="form-text text-muted">
                 Please, provide valid info. It's needed to our HRs to get in touch with you.
             </p>
+
+            <hr className="mt-5" />
 
             <form onSubmit={handleSubmit} className="mt-5">
                 <h5>PERSONAL INFORMATION</h5>
@@ -27,14 +29,14 @@ const UserProfileForm = (props: InjectedFormProps) => {
                     <ContactsForm />
                 </Jumbotron>
 
-                <h5>EDUCATION</h5>
-                <Jumbotron>
-                    <EducationForm />
-                </Jumbotron>
-
                 <h5>EMPLOYMENT HISTORY</h5>
                 <Jumbotron>
                     <EmploymentForm />
+                </Jumbotron>
+
+                <h5>MENTORING</h5>
+                <Jumbotron>
+                    <MentoringForm />
                 </Jumbotron>
 
                 <h5>OTHER</h5>
@@ -56,4 +58,4 @@ const UserProfileForm = (props: InjectedFormProps) => {
 
 export default reduxForm({
     form: 'profileForm',
-})(UserProfileForm);
+})(MentorProfileForm);

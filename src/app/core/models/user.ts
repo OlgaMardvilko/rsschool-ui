@@ -47,6 +47,11 @@ export interface IProfile {
         isStudiedAtRSSchool: boolean;
         hadMentoringExperience: boolean;
     };
+    mentoring: {
+        amountStages: string;
+        amountStudents: string;
+        colleague: string;
+    };
     githubId: string;
 }
 

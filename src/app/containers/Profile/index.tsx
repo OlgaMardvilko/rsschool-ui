@@ -1,21 +1,24 @@
-import ProfileForm from 'components/ProfileForm';
+import UserProfileForm from 'components/ProfileForm';
 import { fetchUserProfile, updateUserProfile } from 'core/actions';
 import { IProfile } from 'core/models';
 import { RootState } from 'core/reducers';
 import * as React from 'react';
 import { connect } from 'react-redux';
 import './index.scss';
+import MentorProfileForm from '../../components/ProfileForm/MentorProfileForm';
 
 type ProfileProps = {
     load: () => void;
     submit: (formData: any) => void;
     formData: any;
+    isAdmin: any;
 };
 
 const mapStateToProps = (state: RootState, props: ProfileProps): ProfileProps => {
     return {
         ...props,
         formData: state.user.profile,
+        isAdmin: state.user.isAdmin,
     };
 };
 
@@ -42,7 +45,11 @@ class Profile extends React.Component<ProfileProps> {
     };
 
     render() {
-        return <ProfileForm initialValues={this.props.formData} onSubmit={this.handleSubmit} />;
+        if (this.props.isAdmin) {
+            return <MentorProfileForm initialValues={this.props.formData} onSubmit={this.handleSubmit} />;
+        }
+
+        return <UserProfileForm initialValues={this.props.formData} onSubmit={this.handleSubmit} />;
     }
 }
 
