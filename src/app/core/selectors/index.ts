@@ -1,4 +1,3 @@
-
 import { RootState } from '../reducers';
 
 export const getStudentProfile = (state: RootState) => {
@@ -23,4 +22,3 @@ export function isAnyPartLoaded({ router, ...state }: any) {
     }
     return false;
 }
-
