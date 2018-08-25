@@ -7,7 +7,7 @@ import Schedule from '../Schedule';
 import Home from '../Home';
 import Layout from '../Layout';
 import Profile from '../Profile';
-import Student from '../StudentProfile';
+import Student from '../ProfileUser/StudentProfile';
 
 const App = (): JSX.Element => {
     return (

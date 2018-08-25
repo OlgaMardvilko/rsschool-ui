@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { IProfile, IUser, IUserBase } from '../../core/models/index';
-import Student from '../../components/StudentProfile/index';
+import Student from '../../components/ProfileUser/StudentProfile';
 import { connect } from 'react-redux';
 import { RootState } from 'core/reducers/index';
 import { fetchStudent } from '../../core/actions/student';
