@@ -23,12 +23,14 @@ const Contacts = (props: Props) => (
         {Object.keys(props.contacts).map(contact => {
             return (
                 <React.Fragment key={contact.toString()}>
-                    <Row>
-                        <Col md="4" className={cn('capital')}>
-                            {contact}:
-                        </Col>
-                        <Col md="8">{props.contacts[contact]}</Col>
-                    </Row>
+                    {props.contacts[contact] ? (
+                        <Row>
+                            <Col md="4" className={cn('capital')}>
+                                {contact}:
+                            </Col>
+                            <Col md="8">{props.contacts[contact]}</Col>
+                        </Row>
+                    ) : null}
                 </React.Fragment>
             );
         })}
