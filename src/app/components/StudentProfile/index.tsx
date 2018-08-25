@@ -78,8 +78,8 @@ const StudentProfile = (props: Props) => {
                     <Education
                         primaryEducation={{
                             university: props.studentProfile.primaryEducation.university,
-                            graduationYear: props.studentProfile.primaryEducation.graduationYear,
                             faculty: props.studentProfile.primaryEducation.faculty,
+                            graduationYear: props.studentProfile.primaryEducation.graduationYear,
                         }}
                         isInternshipNeeded={props.studentProfile.isInternshipNeeded}
                         isWorkNeeded={props.studentProfile.isWorkNeeded}

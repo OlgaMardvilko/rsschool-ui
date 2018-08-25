@@ -85,8 +85,8 @@ const student: ICourseStudent = {
             },
             primaryEducation: {
                 university: 'Belarusian State University of Informatics And Radioelectronics',
-                graduationYear: 2015,
                 faculty: 'Faculty of Civil Engineering',
+                graduationYear: 2015,
             },
             isInternshipNeeded: false,
             isWorkNeeded: true,
