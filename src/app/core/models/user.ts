@@ -8,7 +8,7 @@ export enum YearsInFrontEnd {
     lessOne = 'less than 1 year',
     lesTwo = 'less than 2 years',
     twoFive = '2-5 years',
-    moreFive = 'more than 5 years',
+    moreFive = '5+ years',
 }
 
 export interface IProfile {

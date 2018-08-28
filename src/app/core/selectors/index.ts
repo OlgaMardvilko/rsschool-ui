@@ -14,6 +14,13 @@ export const getStudentMentors = (state: RootState) => {
     return;
 };
 
+export const getMentorProfile = (state: RootState) => {
+    if (state.mentor.mentor) {
+        return state.mentor.mentor.profile;
+    }
+    return;
+};
+
 export function isAnyPartLoaded({ router, ...state }: any) {
     for (const key in state) {
         if (!!state[key].isLoading) {

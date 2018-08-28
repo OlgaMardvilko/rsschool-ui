@@ -7,6 +7,7 @@ import { ScheduleState, scheduleReducer } from './schedule';
 import { UserState, userReducer } from './user';
 import { CourseState, courseReducer } from './course';
 import { StudentState, studentReducer } from './student';
+import { MentorState, mentorReducer } from './mentor';
 
 export interface RootState {
     courses: CoursesState;
@@ -16,6 +17,7 @@ export interface RootState {
     user: UserState;
     router: RouterState;
     student: StudentState;
+    mentor: MentorState;
 }
 
 const rootReducer = combineReducers<RootState, Action<any>>({
@@ -26,6 +28,7 @@ const rootReducer = combineReducers<RootState, Action<any>>({
     user: userReducer,
     router: routerReducer as any,
     student: studentReducer,
+    mentor: mentorReducer,
 });
 
 export default rootReducer;
