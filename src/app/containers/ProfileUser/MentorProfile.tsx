@@ -12,7 +12,11 @@ class Index extends React.Component<Props, any> {
     }
 
     render() {
-        return this.props.profile ? <Mentor mentorProfile={this.props.profile} /> : <h2>loading...</h2>;
+        return this.props.profile ? (
+            <Mentor mentorProfile={this.props.profile} handleApprove={() => {}} handleReject={() => {}} />
+        ) : (
+            <h2>loading...</h2>
+        );
     }
 }
 

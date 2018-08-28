@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { IProfile } from '../../core/models';
-import { Col, Jumbotron, Row } from 'reactstrap';
+import { Col, Jumbotron, Row, Button } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck, faBan } from '@fortawesome/free-solid-svg-icons';
 import ProfileName from './ProfileName';
 import Contacts from './Contacts';
 import Personal from './Personal';
@@ -9,53 +11,65 @@ import Other from './Other';
 
 type Props = {
     mentorProfile: IProfile;
+    handleReject: () => void;
+    handleApprove: () => void;
 };
 
 const MentorProfile = (props: Props) => {
     return (
-        <Jumbotron className="mt-2">
-            <Row>
-                <Col md="3">
-                    <Avatar githubId={props.mentorProfile.githubId} />
-                </Col>
-                <Col md="9">
-                    <ProfileName
-                        name={{
-                            firstName: props.mentorProfile.firstName,
-                            lastName: props.mentorProfile.lastName,
-                        }}
-                        nameNative={{
-                            firstName: props.mentorProfile.firstNameNative,
-                            lastName: props.mentorProfile.lastNameNative,
-                        }}
-                    />
+        <React.Fragment>
+            <Jumbotron className="mt-2">
+                <Row>
+                    <Col md="3">
+                        <Avatar githubId={props.mentorProfile.githubId} />
+                    </Col>
+                    <Col md="9">
+                        <ProfileName
+                            name={{
+                                firstName: props.mentorProfile.firstName,
+                                lastName: props.mentorProfile.lastName,
+                            }}
+                            nameNative={{
+                                firstName: props.mentorProfile.firstNameNative,
+                                lastName: props.mentorProfile.lastNameNative,
+                            }}
+                        />
 
-                    <hr />
+                        <hr />
 
-                    <Personal
-                        dateOfBirth={props.mentorProfile.dateOfBirth}
-                        gender={props.mentorProfile.gender}
-                        tShirtSize={props.mentorProfile.tShirtSize}
-                    />
+                        <Personal
+                            dateOfBirth={props.mentorProfile.dateOfBirth}
+                            gender={props.mentorProfile.gender}
+                            tShirtSize={props.mentorProfile.tShirtSize}
+                        />
 
-                    <hr />
+                        <hr />
 
-                    <Contacts
-                        contacts={{
-                            phone: props.mentorProfile.contacts.phone,
-                            emails: props.mentorProfile.contacts.emails,
-                            skype: props.mentorProfile.contacts.skype,
-                            telegram: props.mentorProfile.contacts.telegram,
-                            other: props.mentorProfile.contacts.other,
-                        }}
-                    />
+                        <Contacts
+                            contacts={{
+                                phone: props.mentorProfile.contacts.phone,
+                                emails: props.mentorProfile.contacts.emails,
+                                skype: props.mentorProfile.contacts.skype,
+                                telegram: props.mentorProfile.contacts.telegram,
+                                other: props.mentorProfile.contacts.other,
+                            }}
+                        />
 
-                    <hr />
+                        <hr />
 
-                    <Other notes={props.mentorProfile.notes} />
-                </Col>
-            </Row>
-        </Jumbotron>
+                        <Other notes={props.mentorProfile.notes} />
+                    </Col>
+                </Row>
+            </Jumbotron>
+            <div className="text-right">
+                <Button color="danger" onClick={props.handleReject}>
+                    <FontAwesomeIcon icon={faBan} /> Reject
+                </Button>{' '}
+                <Button color="success" onClick={props.handleApprove}>
+                    <FontAwesomeIcon icon={faCheck} /> Approve
+                </Button>
+            </div>
+        </React.Fragment>
     );
 };
 
