@@ -5,6 +5,7 @@ import ProfileName from './ProfileName';
 import Contacts from './Contacts';
 import Personal from './Personal';
 import Avatar from './Avatar';
+import Other from './Other';
 
 type Props = {
     mentorProfile: IProfile;
@@ -50,6 +51,8 @@ const MentorProfile = (props: Props) => {
                     />
 
                     <hr />
+
+                    <Other notes={props.mentorProfile.notes} />
                 </Col>
             </Row>
         </Jumbotron>
