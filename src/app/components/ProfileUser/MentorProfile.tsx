@@ -8,6 +8,7 @@ import Contacts from './Contacts';
 import Personal from './Personal';
 import Avatar from './Avatar';
 import Other from './Other';
+import EmploymentHistory from './EmploymentHistory';
 
 type Props = {
     mentorProfile: IProfile;
@@ -53,6 +54,18 @@ const MentorProfile = (props: Props) => {
                                 telegram: props.mentorProfile.contacts.telegram,
                                 other: props.mentorProfile.contacts.other,
                             }}
+                        />
+
+                        <hr />
+
+                        <EmploymentHistory
+                            employmentHistory={props.mentorProfile.employmentHistory}
+                            epamEmail={props.mentorProfile.epamDetails.epamEmail}
+                            epamUpsaId={props.mentorProfile.epamDetails.epamUpsaId}
+                            isEPAMEmployee={props.mentorProfile.epamDetails.isEPAMEmployee}
+                            yearsInFrontEnd={props.mentorProfile.experience.yearsInFrontEnd}
+                            isStudiedAtRSSchool={props.mentorProfile.experience.isStudiedAtRSSchool}
+                            hadMentoringExperience={props.mentorProfile.experience.hadMentoringExperience}
                         />
 
                         <hr />
