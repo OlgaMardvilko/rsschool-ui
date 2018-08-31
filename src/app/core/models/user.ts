@@ -11,6 +11,11 @@ export enum YearsInFrontEnd {
     moreFive = '5+ years',
 }
 
+export enum AmountStages {
+    onlySecond = 'Only second (≈ 15 weeks)',
+    secondThird = 'Second & Third (≈ 22 weeks)',
+}
+
 export interface IProfile {
     city: string;
     employmentHistory: string;
@@ -48,9 +53,9 @@ export interface IProfile {
         hadMentoringExperience: boolean;
     };
     mentoring: {
-        amountStages: string;
-        amountStudents: string;
-        colleague: string;
+        amountStages?: AmountStages;
+        amountStudents?: number;
+        colleague?: string;
     };
     githubId: string;
 }

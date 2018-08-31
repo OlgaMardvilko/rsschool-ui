@@ -9,6 +9,7 @@ import Personal from './Personal';
 import Avatar from './Avatar';
 import Other from './Other';
 import EmploymentHistory from './EmploymentHistory';
+import Mentoring from './Mentoring';
 
 type Props = {
     mentorProfile: IProfile;
@@ -66,6 +67,14 @@ const MentorProfile = (props: Props) => {
                             yearsInFrontEnd={props.mentorProfile.experience.yearsInFrontEnd}
                             isStudiedAtRSSchool={props.mentorProfile.experience.isStudiedAtRSSchool}
                             hadMentoringExperience={props.mentorProfile.experience.hadMentoringExperience}
+                        />
+
+                        <hr />
+
+                        <Mentoring
+                            amountStages={props.mentorProfile.mentoring.amountStages}
+                            amountStudents={props.mentorProfile.mentoring.amountStudents}
+                            colleague={props.mentorProfile.mentoring.colleague}
                         />
 
                         <hr />

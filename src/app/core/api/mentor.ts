@@ -1,4 +1,4 @@
-import { IUser, Gender, YearsInFrontEnd } from '../models';
+import { IUser, Gender, YearsInFrontEnd, AmountStages } from '../models';
 
 const mentor: IUser = {
     isAdmin: false,
@@ -52,9 +52,9 @@ const mentor: IUser = {
             hadMentoringExperience: false,
         },
         mentoring: {
-            amountStages: '',
-            amountStudents: '',
-            colleague: '',
+            amountStages: AmountStages.secondThird,
+            amountStudents: 5,
+            colleague: 'Ivan Ivanov',
         },
         githubId: 'dzmitry-varabei',
     },
