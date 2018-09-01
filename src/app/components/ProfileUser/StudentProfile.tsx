@@ -3,7 +3,7 @@ import { IProfile, IUser, IUserBase } from '../../core/models';
 import { Col, Jumbotron, Row } from 'reactstrap';
 import ModalExpel from './ModalExpel';
 import ProfileName from './ProfileName';
-import MainInformation from './MainInformation';
+import MainStudent from './MainStudent';
 import Contacts from './Contacts';
 import Education from './Education';
 import Other from './Other';
@@ -47,7 +47,7 @@ const StudentProfile = (props: Props) => {
 
                     <hr />
 
-                    <MainInformation
+                    <MainStudent
                         englishLevel={props.studentProfile.englishLevel}
                         city={props.studentProfile.city}
                         githubName={props.studentProfile.githubId}

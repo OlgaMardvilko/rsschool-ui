@@ -4,6 +4,7 @@ import { Col, Jumbotron, Row, Button } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faBan } from '@fortawesome/free-solid-svg-icons';
 import ProfileName from './ProfileName';
+import MainMentor from './MainMentor';
 import Contacts from './Contacts';
 import Personal from './Personal';
 import Avatar from './Avatar';
@@ -35,6 +36,14 @@ const MentorProfile = (props: Props) => {
                                 firstName: props.mentorProfile.firstNameNative,
                                 lastName: props.mentorProfile.lastNameNative,
                             }}
+                        />
+
+                        <hr />
+
+                        <MainMentor
+                            yearsInFrontEnd={props.mentorProfile.experience.yearsInFrontEnd}
+                            city={props.mentorProfile.city}
+                            githubName={props.mentorProfile.githubId}
                         />
 
                         <hr />
