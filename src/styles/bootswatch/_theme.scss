@@ -129,6 +129,14 @@ th {
     border-radius: 0;
 }
 
+.input-date::-webkit-clear-button {
+    display: none;
+}
+
+.input-date::-webkit-inner-spin-button {
+    display: none;
+}
+
 // Navs ========================================================================
 
 .dropdown-menu {

@@ -16,6 +16,7 @@ const mapStateToProps = (state: RootState, props: any): Props => {
         participations: state.user.participations,
         isAdmin: state.user.isAdmin,
         hasCourse: Array.isArray(state.user.participations) && state.user.participations.length > 0,
+        role: state.user.participations && state.user.participations[0] && state.user.participations[0].role,
     };
 };
 
@@ -35,6 +36,7 @@ type Props = {
     route: any;
     username: string;
     participations: IUserParticipation[];
+    role: string;
 };
 
 class Header extends React.Component<Props, any> {
@@ -83,7 +85,7 @@ class Header extends React.Component<Props, any> {
                                 </NavLink>
                             </li>
                         )}
-                        {this.props.isAdmin ? (
+                        {this.props.role ? (
                             <li className="nav-item">
                                 <NavLink className="nav-link" to="/profile/mentor">
                                     Profile

@@ -12,6 +12,7 @@ type ProfileProps = {
     submit: (formData: any) => void;
     formData: any;
     isAdmin: any;
+    role: any;
 };
 
 const mapStateToProps = (state: RootState, props: ProfileProps): ProfileProps => {
@@ -19,6 +20,7 @@ const mapStateToProps = (state: RootState, props: ProfileProps): ProfileProps =>
         ...props,
         formData: state.user.profile,
         isAdmin: state.user.isAdmin,
+        role: state.user.participations && state.user.participations[0] && state.user.participations[0].role,
     };
 };
 
@@ -45,7 +47,7 @@ class Profile extends React.Component<ProfileProps> {
     };
 
     render() {
-        if (this.props.isAdmin) {
+        if (this.props.role === 'mentor') {
             return <MentorProfileForm initialValues={this.props.formData} onSubmit={this.handleSubmit} />;
         }
 

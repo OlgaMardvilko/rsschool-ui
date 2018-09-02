@@ -71,10 +71,11 @@ class NamesForm extends React.PureComponent<any, any> {
                 <FormGroup className="col-md-12">
                     <Label className="field-required">Birth Date</Label>
                     <Field
+                        className="input-date"
                         name="dateOfBirth"
                         placeholder="12-08-1997"
                         component={ReduxFormInput}
-                        type="text"
+                        type="date"
                         validate={[required]}
                     />
                 </FormGroup>

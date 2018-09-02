@@ -14,10 +14,10 @@ class MentoringForm extends React.PureComponent<any, any> {
                     <FormGroup className="form-check">
                         <label className="form-check-label">
                             <Field
-                                name="mentoring.stages"
+                                name="mentoring.amountStages"
                                 component={ReduxFormInput}
                                 type="radio"
-                                value="Only second (≈ 15 weeks)"
+                                value="1"
                                 validate={[required]}
                             />
                             Only second (≈ 15 weeks)
@@ -26,10 +26,10 @@ class MentoringForm extends React.PureComponent<any, any> {
                     <FormGroup className="form-check">
                         <label className="form-check-label">
                             <Field
-                                name="mentoring.stages"
+                                name="mentoring.amountStages"
                                 component={ReduxFormInput}
                                 type="radio"
-                                value="Second & Third (≈ 22 weeks)"
+                                value="2"
                                 validate={[required]}
                             />
                             Second & Third (≈ 22 weeks)
@@ -64,7 +64,7 @@ class MentoringForm extends React.PureComponent<any, any> {
                     </Label>
                     <Field
                         type="text"
-                        name="mentoring.mentoringTogetherWith"
+                        name="mentoring.colleague"
                         component={ReduxFormInput}
                         placeholder="Ivan Ivanov"
                         validate={[required]}

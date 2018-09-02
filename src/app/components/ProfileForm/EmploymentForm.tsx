@@ -2,7 +2,7 @@ import ReduxFormInput from 'components/ReduxFormInput';
 import * as React from 'react';
 import { FormGroup, Label } from 'reactstrap';
 import { Field } from 'redux-form';
-import { emailFormatter, emailParser, required } from './parsers-formatters';
+import { required } from './parsers-formatters';
 import { EXPERIENCE } from '../../reference-data';
 
 class ExperienceForm extends React.PureComponent<any, any> {
@@ -46,7 +46,7 @@ class ExperienceForm extends React.PureComponent<any, any> {
                                 name="experience.isStudiedAtRSSchool"
                                 component={ReduxFormInput}
                                 type="radio"
-                                value="yes"
+                                value="true"
                                 validate={[required]}
                             />
                             Yes
@@ -58,7 +58,7 @@ class ExperienceForm extends React.PureComponent<any, any> {
                                 name="experience.isStudiedAtRSSchool"
                                 component={ReduxFormInput}
                                 type="radio"
-                                value="no"
+                                value="false"
                                 validate={[required]}
                             />
                             No
@@ -76,7 +76,7 @@ class ExperienceForm extends React.PureComponent<any, any> {
                                 name="experience.hadMentoringExperience"
                                 component={ReduxFormInput}
                                 type="radio"
-                                value="yes"
+                                value="true"
                                 validate={[required]}
                             />
                             Yes
@@ -88,7 +88,7 @@ class ExperienceForm extends React.PureComponent<any, any> {
                                 name="experience.hadMentoringExperience"
                                 component={ReduxFormInput}
                                 type="radio"
-                                value="no"
+                                value="false"
                                 validate={[required]}
                             />
                             No
@@ -114,9 +114,7 @@ class ExperienceForm extends React.PureComponent<any, any> {
                     <Label>EPAM Email</Label>
                     <Field
                         component={ReduxFormInput}
-                        format={emailFormatter}
                         name="epamDetails.epamEmail"
-                        parse={emailParser}
                         placeholder="Epam Email"
                         type="email"
                     />
