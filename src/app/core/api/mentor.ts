@@ -11,8 +11,8 @@ const mentor: IUser = {
         lastNameNative: 'Степанов',
         city: 'Minsk',
         englishLevel: '',
+        phone: '8-345-343-22-78',
         contacts: {
-            phone: '8-345-343-22-78',
             skype: 'Ivan.Stepanov',
             telegram: '@Ivan.Stepanov',
             other: '@Ivan.Stepanov',
