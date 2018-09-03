@@ -6,6 +6,7 @@ import EducationForm from './EducationForm';
 import NamesForm from './NamesForm';
 import OtherForm from './OtherForm';
 import EmploymentForm from './EmploymentForm';
+import { scrollIntoError } from '../../core/helpers';
 
 const UserProfileForm = (props: InjectedFormProps) => {
     const { handleSubmit, pristine, submitting } = props;
@@ -56,4 +57,5 @@ const UserProfileForm = (props: InjectedFormProps) => {
 
 export default reduxForm({
     form: 'profileForm',
+    onSubmitFail: error => scrollIntoError(error),
 })(UserProfileForm);

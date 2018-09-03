@@ -11,7 +11,7 @@ class ExperienceForm extends React.PureComponent<any, any> {
             <div key="1" className="row">
                 <FormGroup className="col-md-12">
                     <Label>Describe your employment history</Label>
-                    <Field name="employmentHistory" component={ReduxFormInput} type="textarea" />
+                    <Field name="experience.employmentHistory" component={ReduxFormInput} type="textarea" />
                 </FormGroup>
             </div>,
 
