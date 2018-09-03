@@ -17,6 +17,7 @@ const mapStateToProps = (state: RootState, props: any): Props => {
         isAdmin: state.user.isAdmin,
         hasCourse: Array.isArray(state.user.participations) && state.user.participations.length > 0,
         role: state.user.participations && state.user.participations[0] && state.user.participations[0].role,
+        form: state.user.profile,
     };
 };
 
@@ -37,6 +38,7 @@ type Props = {
     username: string;
     participations: IUserParticipation[];
     role: string;
+    form: any;
 };
 
 class Header extends React.Component<Props, any> {

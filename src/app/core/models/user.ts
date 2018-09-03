@@ -27,8 +27,8 @@ export interface IProfile {
     lastName: string;
     lastNameNative: string;
     notes: string;
+    phone: string;
     contacts: {
-        phone: string;
         emails: string;
         skype: string;
         telegram: string;

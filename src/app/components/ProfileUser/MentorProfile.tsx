@@ -62,7 +62,7 @@ const MentorProfile = (props: Props) => {
 
                             <Contacts
                                 contacts={{
-                                    phone: props.mentorProfile.contacts.phone,
+                                    phone: props.mentorProfile.phone,
                                     emails: props.mentorProfile.contacts.emails,
                                     skype: props.mentorProfile.contacts.skype,
                                     telegram: props.mentorProfile.contacts.telegram,

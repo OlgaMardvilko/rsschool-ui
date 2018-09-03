@@ -69,7 +69,7 @@ const StudentProfile = (props: Props) => {
 
                             <Contacts
                                 contacts={{
-                                    phone: props.studentProfile.contacts.phone,
+                                    phone: props.studentProfile.phone,
                                     emails: props.studentProfile.contacts.emails,
                                     skype: props.studentProfile.contacts.skype,
                                     telegram: props.studentProfile.contacts.telegram,

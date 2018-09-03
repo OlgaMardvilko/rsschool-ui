@@ -6,6 +6,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import './index.scss';
 import MentorProfileForm from '../../components/ProfileForm/MentorProfileForm';
+import { Redirect } from 'react-router';
 
 type ProfileProps = {
     load: () => void;
@@ -38,15 +39,24 @@ const mapDispatchToProps = (dispatch: any, props: ProfileProps): ProfileProps =>
 };
 
 class Profile extends React.Component<ProfileProps> {
+    state = {
+        redirectToProfile: false,
+    };
+
     componentDidMount() {
         this.props.load();
     }
 
     handleSubmit = (formData: any) => {
         this.props.submit(formData);
+        this.setState({ redirectToProfile: true });
     };
 
     render() {
+        if (this.state.redirectToProfile === true || this.props.formData) {
+            return this.props.role ? <Redirect to="/mentor" /> : <Redirect to="/student" />;
+        }
+
         if (this.props.role === 'mentor') {
             return <MentorProfileForm initialValues={this.props.formData} onSubmit={this.handleSubmit} />;
         }

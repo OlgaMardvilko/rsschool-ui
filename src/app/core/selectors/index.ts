@@ -1,8 +1,8 @@
 import { RootState } from '../reducers';
 
-export const getStudentProfile = (state: RootState) => {
-    if (state.student.student && state.student.student.user) {
-        return state.student.student.user.profile;
+export const getUserProfile = (state: RootState) => {
+    if (state.user && state.user.profile) {
+        return state.user.profile;
     }
     return;
 };
@@ -14,9 +14,9 @@ export const getStudentMentors = (state: RootState) => {
     return;
 };
 
-export const getMentorProfile = (state: RootState) => {
-    if (state.mentor.mentor) {
-        return state.mentor.mentor.profile;
+export const getUserRole = (state: RootState) => {
+    if (state.user.participations && state.user.participations[0] && state.user.participations[0].role) {
+        return state.user.participations[0].role;
     }
     return;
 };

@@ -57,5 +57,5 @@ const UserProfileForm = (props: InjectedFormProps) => {
 
 export default reduxForm({
     form: 'profileForm',
-    onSubmitFail: error => scrollIntoError(error),
+    onSubmitFail: (error: any) => scrollIntoError(error),
 })(UserProfileForm);

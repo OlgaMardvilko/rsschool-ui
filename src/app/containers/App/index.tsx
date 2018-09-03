@@ -7,8 +7,7 @@ import Schedule from '../Schedule';
 import Home from '../Home';
 import Layout from '../Layout';
 import Profile from '../Profile';
-import Student from '../ProfileUser/StudentProfile';
-import Mentor from '../ProfileUser/MentorProfile';
+import UserProfile from '../ProfileUser/index';
 
 const App = (): JSX.Element => {
     return (
@@ -25,8 +24,8 @@ const App = (): JSX.Element => {
                 <Route exact={true} path="/profile/mentor" component={Profile} />
                 <Route exact={true} path="/admin" component={Admin} />
 
-                <Route exact={true} path="/student" component={Student} />
-                <Route exact={true} path="/mentor" component={Mentor} />
+                <Route exact={true} path="/student" component={UserProfile} />
+                <Route exact={true} path="/mentor" component={UserProfile} />
             </Layout>
         </Switch>
     );

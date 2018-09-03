@@ -13,7 +13,7 @@ class ContactsForm extends React.PureComponent<any, any> {
                     <InputGroup className="mb-3">
                         <InputGroupAddon addonType="prepend">8-</InputGroupAddon>
                         <Field
-                            name="contacts.phone"
+                            name="phone"
                             pattern="(\+?\d[- .]*){9,13}"
                             placeholder="111-111-11-11"
                             component={ReduxFormInput}
