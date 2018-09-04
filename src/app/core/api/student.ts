@@ -76,8 +76,8 @@ const student: ICourseStudent = {
             lastNameNative: 'Волкова',
             city: 'Minsk',
             englishLevel: 'B1',
+            phone: '8-345-343-22-78',
             contacts: {
-                phone: '8-345-343-22-78',
                 skype: 'Ekaterina.Volkova',
                 telegram: '@Ekaterina.Volkova',
                 other: '@Ekaterina.Volkova',
