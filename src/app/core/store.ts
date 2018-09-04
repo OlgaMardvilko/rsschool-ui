@@ -6,7 +6,6 @@ import IHotModule from './models/hot-module.model';
 import rootReducer from './reducers';
 // import rootSaga from './sagas';
 import thunk from 'redux-thunk';
-import { composeWithDevTools } from 'redux-devtools-extension';
 
 declare const module: IHotModule;
 
@@ -14,7 +13,7 @@ const configureStore = (history: History) => {
     const routerMiddleware = createRouterMiddleware(history);
     // const sagaMiddleware = createSagaMiddleware();
 
-    const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(routerMiddleware, thunk)));
+    const store = createStore(rootReducer, applyMiddleware(routerMiddleware, thunk));
 
     // sagaMiddleware.run(rootSaga);
 
