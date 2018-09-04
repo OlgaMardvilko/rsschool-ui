@@ -10,4 +10,4 @@ export const emailParser = (email: string) => {
     return [{ primary: true, value: email }];
 };
 
-export const required = (value: string) => (value ? undefined : 'Required');
+export const required = (value: any) => (value ? undefined : 'Required');

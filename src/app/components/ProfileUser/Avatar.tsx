@@ -12,7 +12,7 @@ const Avatar = (props: Props) => {
     return (
         <React.Fragment>
             <p className="mb-2">
-                <img src={getGithubAvatar(githubId)} alt={`${githubId}`} className={cn('avatar')} />
+                <img src={getGithubAvatar(githubId)} alt={githubId} className={cn('avatar')} />
             </p>
         </React.Fragment>
     );

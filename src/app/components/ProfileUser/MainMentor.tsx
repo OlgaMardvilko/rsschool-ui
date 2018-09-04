@@ -30,7 +30,7 @@ const MainMentor = (props: Props) => {
                 </Col>
                 <Col sm="3">
                     <p>
-                        <a href={`https://github.com/${githubName}`}>{`${props.githubName}`}</a>
+                        <a href={`https://github.com/${githubName}`}>{githubName}</a>
                     </p>
                     <h3>
                         <a href={`https://github.com/${githubName}`}>
