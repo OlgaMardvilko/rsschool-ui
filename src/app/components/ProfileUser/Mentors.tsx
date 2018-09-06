@@ -9,13 +9,12 @@ const Mentors = (props: Props) => {
     const { mentors } = props;
     return (
         <React.Fragment>
-            {mentors
-                ? mentors.map(mentor => (
-                      <p key={mentor._id}>
-                          Mentor: <a href="#">{mentor._id}</a>
-                      </p>
-                  ))
-                : null}
+            {mentors &&
+                mentors.map(mentor => (
+                    <p key={mentor._id}>
+                        Mentor: <a href="#">{mentor._id}</a>
+                    </p>
+                ))}
         </React.Fragment>
     );
 };
