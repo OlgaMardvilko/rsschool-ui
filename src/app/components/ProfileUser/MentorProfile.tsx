@@ -24,7 +24,7 @@ const MentorProfile = (props: Props) => {
     return (
         <React.Fragment>
             <main className="container">
-                <PagePrint namePage="Mentor Profile" />
+                <PagePrint pageName="Mentor Profile" />
                 <Jumbotron className="mt-2">
                     <Row>
                         <Col md="3">
