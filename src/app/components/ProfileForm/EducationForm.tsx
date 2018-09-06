@@ -17,7 +17,7 @@ class EducationForm extends React.PureComponent<any, any> {
     render() {
         const faculties = this.getFaculties();
         return [
-            <div key="1" className="row">
+            <div key="primaryEducation_university" className="row">
                 <FormGroup className="col-md-12">
                     <Label>Your University</Label>
                     <Field
@@ -35,7 +35,7 @@ class EducationForm extends React.PureComponent<any, any> {
                 </FormGroup>
             </div>,
 
-            <div key="2" className="row">
+            <div key="primaryEducation" className="row">
                 <FormGroup className="col-md-9">
                     <Label>Your Faculty</Label>
                     <Field
@@ -68,7 +68,7 @@ class EducationForm extends React.PureComponent<any, any> {
                 </FormGroup>
             </div>,
 
-            <div key="3" className="row">
+            <div key="englishLevel" className="row">
                 <FormGroup className="col-md-12">
                     <Label>Select Your English Level</Label>
                     <Field name="englishLevel" component={ReduxFormInput} type="select">
@@ -81,7 +81,7 @@ class EducationForm extends React.PureComponent<any, any> {
                 </FormGroup>
             </div>,
 
-            <div key="4" className="row">
+            <div key="isInternshipWorkNeeded" className="row">
                 <FormGroup className="col">
                     <FormGroup className="form-check">
                         <label className="form-check-label">

@@ -8,7 +8,7 @@ import { QUANTITY } from '../../reference-data';
 class MentoringForm extends React.PureComponent<any, any> {
     render() {
         return [
-            <div key="1" className="row">
+            <div key="mentoring_amountStages" className="row">
                 <label className="col-md-12 field-required">What stages would you like to be as a mentor?</label>
                 <FormGroup className="col">
                     <FormGroup className="form-check">
@@ -38,7 +38,7 @@ class MentoringForm extends React.PureComponent<any, any> {
                 </FormGroup>
             </div>,
 
-            <div key="2" className="row">
+            <div key="mentoring_amountStudents" className="row">
                 <FormGroup className="col-md-6">
                     <Label className="field-required">How many students do you want to mentor?</Label>
                     <Field
@@ -57,7 +57,7 @@ class MentoringForm extends React.PureComponent<any, any> {
                 </FormGroup>
             </div>,
 
-            <div key="3" className="row">
+            <div key="mentoring_colleague" className="row">
                 <FormGroup className="col-md-12">
                     <Label className="field-required">
                         If you want to mentor students with another colleague together, write his/her name and surname?

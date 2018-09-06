@@ -8,14 +8,14 @@ import { EXPERIENCE } from '../../reference-data';
 class ExperienceForm extends React.PureComponent<any, any> {
     render() {
         return [
-            <div key="1" className="row">
+            <div key="employmentHistory" className="row">
                 <FormGroup className="col-md-12">
                     <Label>Describe your employment history</Label>
                     <Field name="employmentHistory" component={ReduxFormInput} type="textarea" />
                 </FormGroup>
             </div>,
 
-            <div key="2" className="row">
+            <div key="experience_yearsInFrontEnd" className="row">
                 <label className="col-md-12 field-required">Your Front-end Experience</label>
                 <FormGroup className="col-md-12">
                     {EXPERIENCE.map((experience, index) => (
@@ -37,7 +37,7 @@ class ExperienceForm extends React.PureComponent<any, any> {
                 </FormGroup>
             </div>,
 
-            <div key="3" className="row">
+            <div key="experience_isStudiedAtRSSchool" className="row">
                 <label className="col-md-12 field-required">I studied at the RSSchool</label>
                 <FormGroup className="col">
                     <FormGroup className="form-check">
@@ -67,7 +67,7 @@ class ExperienceForm extends React.PureComponent<any, any> {
                 </FormGroup>
             </div>,
 
-            <div key="4" className="row">
+            <div key="experience_hadMentoringExperience" className="row">
                 <label className="col-md-12 field-required">I was a mentor at the RSSchool</label>
                 <FormGroup className="col">
                     <FormGroup className="form-check">
@@ -97,9 +97,9 @@ class ExperienceForm extends React.PureComponent<any, any> {
                 </FormGroup>
             </div>,
 
-            <hr key="5" />,
+            <hr key="line" />,
 
-            <div key="6" className="row">
+            <div key="epamDetails_isEPAMEmployee" className="row">
                 <label className="col-md-12">Is EPAM Employee?</label>
                 <FormGroup className="col-md-12 form-check-inline">
                     <label className="form-check-label">
@@ -121,7 +121,7 @@ class ExperienceForm extends React.PureComponent<any, any> {
                 </FormGroup>
             </div>,
 
-            <div key="8" className="row">
+            <div key="epamDetails_epamUpsaId" className="row">
                 <FormGroup className="col-md-12">
                     <Label>EPAM UPSA ID (if you have one. It should contain 19 digits)</Label>
                     <Field

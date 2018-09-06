@@ -6,14 +6,14 @@ import { Field } from 'redux-form';
 class OtherForm extends React.PureComponent<any, any> {
     render() {
         return [
-            <div key="0" className="row">
+            <div key="other_notes" className="row">
                 <FormGroup className="col-md-12">
                     <Label>Additional Information</Label>
                     <Field name="notes" component={ReduxFormInput} type="textarea" />
                 </FormGroup>
             </div>,
 
-            <div key="1" className="row">
+            <div key="other_subscribe" className="row">
                 <FormGroup className="col-md-12 form-check-inline">
                     <label className="form-check-label">
                         <Field name="subscribe" component={ReduxFormInput} type="checkbox" />

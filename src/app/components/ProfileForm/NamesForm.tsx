@@ -8,7 +8,7 @@ import { required } from './parsers-formatters';
 class NamesForm extends React.PureComponent<any, any> {
     render() {
         return [
-            <div key="1" className="row">
+            <div key="firstName" className="row">
                 <FormGroup className="col-md-6">
                     <Label className="field-required">First Name (as it appears on your passport)</Label>
                     <Field
@@ -31,7 +31,7 @@ class NamesForm extends React.PureComponent<any, any> {
                 </FormGroup>
             </div>,
 
-            <div key="2" className="row">
+            <div key="nameNative" className="row">
                 <FormGroup className="col-md-6">
                     <Label className="field-required">First Name (in Russian)</Label>
                     <Field
@@ -54,7 +54,7 @@ class NamesForm extends React.PureComponent<any, any> {
                 </FormGroup>
             </div>,
 
-            <div key="3" className="row">
+            <div key="nameCity" className="row">
                 <FormGroup className="col-md-12">
                     <Label>City</Label>
                     <Field name="city" type="select" component={ReduxFormInput}>
@@ -81,7 +81,7 @@ class NamesForm extends React.PureComponent<any, any> {
                 </FormGroup>
             </div>,
 
-            <div key="5" className="row">
+            <div key="nameGender" className="row">
                 <label className="col-md-12 field-required">Gender</label>
                 <FormGroup className="col-md-12">
                     {GENDER.map((gender, index) => (
@@ -103,7 +103,7 @@ class NamesForm extends React.PureComponent<any, any> {
                 </FormGroup>
             </div>,
 
-            <div key="6" className="row">
+            <div key="nameTShirtSize" className="row">
                 <label className="col-md-12 field-required">T-Shirt Size</label>
                 <FormGroup className="col-md-12">
                     {SHIRT_SIZE.map((shirtSize, index) => (

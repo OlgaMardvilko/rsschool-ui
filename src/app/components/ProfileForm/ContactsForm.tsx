@@ -7,7 +7,7 @@ import { emailFormatter, emailParser, required } from './parsers-formatters';
 class ContactsForm extends React.PureComponent<any, any> {
     render() {
         return [
-            <div key="0" className="row">
+            <div key="contacts_phone" className="row">
                 <FormGroup className="col-md-12">
                     <Label className="field-required">Phone (in the form 8-XXX-XXX-XX-XX)</Label>
                     <InputGroup className="mb-3">
@@ -24,7 +24,7 @@ class ContactsForm extends React.PureComponent<any, any> {
                 </FormGroup>
             </div>,
 
-            <div key="1" className="row">
+            <div key="contacts_emails" className="row">
                 <FormGroup className="col-md-12">
                     <Label className="field-required">Email</Label>
                     <Field
@@ -39,21 +39,21 @@ class ContactsForm extends React.PureComponent<any, any> {
                 </FormGroup>
             </div>,
 
-            <div key="2" className="row">
+            <div key="contacts_skype" className="row">
                 <FormGroup className="col-md-12">
                     <Label>You nickname at Skype</Label>
                     <Field component={ReduxFormInput} name="contacts.skype" placeholder="ivan.ivanov" type="text" />
                 </FormGroup>
             </div>,
 
-            <div key="3" className="row">
+            <div key="contacts_telegram" className="row">
                 <FormGroup className="col-md-12">
                     <Label>You nickname at Telegram</Label>
                     <Field component={ReduxFormInput} name="contacts.telegram" placeholder="@ivan.ivanov" type="text" />
                 </FormGroup>
             </div>,
 
-            <div key="4" className="row">
+            <div key="contacts_other" className="row">
                 <FormGroup className="col-md-12">
                     <Label>Other contact</Label>
                     <Field
