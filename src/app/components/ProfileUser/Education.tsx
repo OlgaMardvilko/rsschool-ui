@@ -19,18 +19,14 @@ type Props = {
 const Education = (props: Props) => (
     <React.Fragment>
         <h2 className="badge badge-info">Education</h2>
-        {Object.keys(props.primaryEducation).map(edication => {
+        {Object.keys(props.primaryEducation).map(item => {
             return (
-                <React.Fragment key={edication.toString()}>
-                    {props.primaryEducation[edication] ? (
-                        <Row>
-                            <Col md="4" className={cn('capital')}>
-                                {edication}:
-                            </Col>
-                            <Col md="8">{props.primaryEducation[edication]}</Col>
-                        </Row>
-                    ) : null}
-                </React.Fragment>
+                <Row key={item.toString()}>
+                    <Col md="4" className={cn('capital')}>
+                        {item}:
+                    </Col>
+                    <Col md="8">{props.primaryEducation[item]}</Col>
+                </Row>
             );
         })}
         <Row>

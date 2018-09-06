@@ -10,11 +10,9 @@ type Props = {
 const Avatar = (props: Props) => {
     const { githubId } = props;
     return (
-        <React.Fragment>
-            <p className="mb-2">
-                <img src={getGithubAvatar(githubId)} alt={githubId} className={cn('avatar')} />
-            </p>
-        </React.Fragment>
+        <p className="mb-2">
+            <img src={getGithubAvatar(githubId)} alt={githubId} className={cn('avatar')} />
+        </p>
     );
 };
 
