@@ -13,6 +13,8 @@ import Avatar from './Avatar';
 import Other from './Other';
 import EmploymentHistory from './EmploymentHistory';
 import Mentoring from './Mentoring';
+import { classNames } from 'core/styles';
+const cn = classNames(require('./index.scss'));
 
 type Props = {
     mentorProfile: IProfile;
@@ -98,9 +100,9 @@ const MentorProfile = (props: Props) => {
                 </Jumbotron>
             </main>
             <div className="text-right">
-                <Button color="danger" onClick={props.handleReject}>
+                <Button color="danger" onClick={props.handleReject} className={cn('spaced')}>
                     <FontAwesomeIcon icon={faBan} /> Reject
-                </Button>{' '}
+                </Button>
                 <Button color="success" onClick={props.handleApprove}>
                     <FontAwesomeIcon icon={faCheck} /> Approve
                 </Button>

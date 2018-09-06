@@ -3,6 +3,8 @@ import { Modal, ModalHeader, ModalBody, ModalFooter, Button, Form, FormGroup } f
 import { requiredFieldError, requiredFieldSuccess } from 'core/validation';
 import ReduxFormInput from 'components/ReduxFormInput';
 import { InjectedFormProps, reduxForm, Field } from 'redux-form';
+import { classNames } from 'core/styles';
+const cn = classNames(require('./index.scss'));
 
 type Props = {
     firstName: string;
@@ -56,9 +58,10 @@ class ModalExpel extends React.PureComponent<Props & InjectedFormProps<{}, Props
                                     type="submit"
                                     disabled={pristine || submitting}
                                     onClick={this.toggle}
+                                    className={cn('spaced')}
                                 >
                                     Yes
-                                </Button>{' '}
+                                </Button>
                                 <Button color="primary" onClick={this.toggle}>
                                     No
                                 </Button>
