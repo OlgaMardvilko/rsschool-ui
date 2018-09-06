@@ -1,6 +1,6 @@
 import { IUser, Gender, YearsInFrontEnd, AmountStages } from '../models';
 
-const mentor: IUser = {
+export const mentorData: IUser = {
     isAdmin: false,
     role: 'mentor',
     _id: 'dadajndjksandjk3n4324',
@@ -68,4 +68,4 @@ const mentor: IUser = {
     ],
 };
 
-export const getMentorProfile = Promise.resolve(mentor);
+export const getMentorProfile = (data: IUser) => Promise.resolve(data);

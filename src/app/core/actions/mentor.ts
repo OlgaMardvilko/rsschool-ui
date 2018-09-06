@@ -1,4 +1,4 @@
-import { getMentorProfile } from '../api/mentor';
+import { getMentorProfile, mentorData } from '../api/mentor';
 import { MENTOR } from '../constants';
 
 export const fetchMentor = () => {
@@ -8,7 +8,7 @@ export const fetchMentor = () => {
         });
 
         try {
-            const data = await getMentorProfile;
+            const data = await getMentorProfile(mentorData);
             dispatch({
                 type: MENTOR.MENTOR_PROFILE_FETCH_OK,
                 payload: data,

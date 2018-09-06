@@ -1,4 +1,4 @@
-import { getStudentProfile } from '../api/student';
+import { getStudentProfile, studentData } from '../api/student';
 import { STUDENT } from '../constants';
 
 export const fetchStudent = () => {
@@ -8,7 +8,7 @@ export const fetchStudent = () => {
         });
 
         try {
-            const data = await getStudentProfile;
+            const data = await getStudentProfile(studentData);
             dispatch({
                 type: STUDENT.STUDENT_PROFILE_FETCH_OK,
                 payload: data,

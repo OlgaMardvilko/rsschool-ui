@@ -1,6 +1,6 @@
 import { ICourseStudent, Gender, YearsInFrontEnd } from '../models';
 
-const student: ICourseStudent = {
+export const studentData: ICourseStudent = {
     _id: 'dadajndjksandjk3n4324',
     city: 'minsk',
     courseId: 'rs-course-2018-1',
@@ -132,4 +132,4 @@ const student: ICourseStudent = {
     excludeReason: '',
 };
 
-export const getStudentProfile = Promise.resolve(student);
+export const getStudentProfile = (data: ICourseStudent) => Promise.resolve(data);
