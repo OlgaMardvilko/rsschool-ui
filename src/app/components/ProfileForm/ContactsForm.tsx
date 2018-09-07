@@ -9,13 +9,13 @@ class ContactsForm extends React.PureComponent<any, any> {
         return [
             <div key="contacts_phone" className="row">
                 <FormGroup className="col-md-12">
-                    <Label className="field-required">Phone (in the form 8-XXX-XXX-XX-XX)</Label>
+                    <Label className="field-required">Phone (in the form +375 XX XXX-XX-XX)</Label>
                     <InputGroup className="mb-3">
-                        <InputGroupAddon addonType="prepend">8-</InputGroupAddon>
+                        <InputGroupAddon addonType="prepend">+375 </InputGroupAddon>
                         <Field
                             name="phone"
-                            pattern="(\+?\d[- .]*){9,13}"
-                            placeholder="111-111-11-11"
+                            pattern="(\+?\d[- .]*){9,12}"
+                            placeholder="29 111-11-11"
                             component={ReduxFormInput}
                             type="tel"
                             validate={[required]}
