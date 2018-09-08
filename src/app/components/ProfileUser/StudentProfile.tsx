@@ -4,7 +4,7 @@ import { Col, Jumbotron, Row } from 'reactstrap';
 import PagePrint from './PagePrint';
 import ModalExpel from './ModalExpel';
 import ProfileName from './ProfileName';
-import MainStudent from './MainStudent';
+import MainInformation from './MainInformation';
 import Contacts from './Contacts';
 import Education from './Education';
 import Other from './Other';
@@ -14,7 +14,7 @@ import EmploymentHistory from './EmploymentHistory';
 import TaskProgress from './TaskProgress';
 import Mentors from './Mentors';
 
-// TODO: add props for rating block MainInformation, change this block with props
+// TODO: add props for Rating block MainInformation, change this block with props
 type Props = {
     studentProfile: IProfile;
     handleExpel: () => void;
@@ -51,8 +51,12 @@ const StudentProfile = (props: Props) => {
 
                             <hr />
 
-                            <MainStudent
-                                englishLevel={props.studentProfile.englishLevel}
+                            <MainInformation
+                                firstColTitle="Rating"
+                                firstColValueOne="22"
+                                firstColValueTwo="/343"
+                                secondColTitle="English Level"
+                                secondColValue={props.studentProfile.englishLevel}
                                 city={props.studentProfile.city}
                                 githubName={props.studentProfile.githubId}
                             />

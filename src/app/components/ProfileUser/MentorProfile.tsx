@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faBan } from '@fortawesome/free-solid-svg-icons';
 import PagePrint from './PagePrint';
 import ProfileName from './ProfileName';
-import MainMentor from './MainMentor';
+import MainInformation from './MainInformation';
 import Contacts from './Contacts';
 import Personal from './Personal';
 import Avatar from './Avatar';
@@ -16,6 +16,7 @@ import Mentoring from './Mentoring';
 import { classNames } from 'core/styles';
 const cn = classNames(require('./index.scss'));
 
+// TODO: add props for Status block MainInformation, change this block with props
 type Props = {
     mentorProfile: IProfile;
     handleReject: () => void;
@@ -46,8 +47,12 @@ const MentorProfile = (props: Props) => {
 
                             <hr />
 
-                            <MainMentor
-                                yearsInFrontEnd={props.mentorProfile.experience.yearsInFrontEnd}
+                            <MainInformation
+                                firstColTitle="Status"
+                                firstColValueOne="need approval"
+                                firstColValueTwo=""
+                                secondColTitle="Experience"
+                                secondColValue={props.mentorProfile.experience.yearsInFrontEnd}
                                 city={props.mentorProfile.city}
                                 githubName={props.mentorProfile.githubId}
                             />

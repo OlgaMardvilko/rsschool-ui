@@ -1,28 +1,43 @@
 import * as React from 'react';
 import { Row, Col } from 'reactstrap';
-import { YearsInFrontEnd } from '../../core/models';
+import { getGithubName } from 'core/helpers/userProfile';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 // TODO: add props for status block, change status with props
 type Props = {
-    yearsInFrontEnd?: YearsInFrontEnd;
+    firstColTitle: string;
+    firstColValueOne: any;
+    firstColValueTwo: any;
+    secondColTitle: string;
+    secondColValue: any;
     city: string;
     githubName: string;
 };
 
-const MainMentor = (props: Props) => {
-    const { yearsInFrontEnd, city, githubName } = props;
+const MainInformation = (props: Props) => {
+    const {
+        firstColTitle,
+        firstColValueOne,
+        firstColValueTwo,
+        secondColTitle,
+        secondColValue,
+        city,
+        githubName,
+    } = props;
     return (
         <React.Fragment>
             <Row className="text-center mt-5">
                 <Col sm="3">
-                    <p>Status</p>
-                    <h3>need approval</h3>
+                    <p>{firstColTitle}</p>
+                    <h3>
+                        {firstColValueOne}
+                        <small>{firstColValueTwo}</small>
+                    </h3>
                 </Col>
                 <Col sm="3">
-                    <p>Experience</p>
-                    <h3>{yearsInFrontEnd}</h3>
+                    <p>{secondColTitle}</p>
+                    <h3>{secondColValue}</h3>
                 </Col>
                 <Col sm="3">
                     <p>City</p>
@@ -30,10 +45,10 @@ const MainMentor = (props: Props) => {
                 </Col>
                 <Col sm="3">
                     <p>
-                        <a href={`https://github.com/${githubName}`}>{githubName}</a>
+                        <a href={getGithubName(githubName)}>{githubName}</a>
                     </p>
                     <h3>
-                        <a href={`https://github.com/${githubName}`}>
+                        <a href={getGithubName(githubName)}>
                             <FontAwesomeIcon icon={faGithub} />
                         </a>
                     </h3>
@@ -43,4 +58,4 @@ const MainMentor = (props: Props) => {
     );
 };
 
-export default MainMentor;
+export default MainInformation;
